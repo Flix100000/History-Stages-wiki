@@ -1,0 +1,61 @@
+{
+  "wikiSidebar": [
+    {
+      "type": "category",
+      "label": "General",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "home"
+        },
+        {
+          "type": "doc",
+          "id": "getting-started"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "For Modpack Developers",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "stage-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "stage-examples"
+        },
+        {
+          "type": "doc",
+          "id": "in-game-editor"
+        },
+        {
+          "type": "doc",
+          "id": "research-system"
+        },
+        {
+          "type": "doc",
+          "id": "commands-and-permissions"
+        },
+        {
+          "type": "doc",
+          "id": "configuration"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "For Mod Developers",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "integrations-and-api"
+        }
+      ]
+    }
+  ]
+}

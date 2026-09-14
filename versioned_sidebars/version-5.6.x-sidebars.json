@@ -1,0 +1,85 @@
+{
+  "wikiSidebar": [
+    {
+      "type": "category",
+      "label": "General",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "home"
+        },
+        {
+          "type": "doc",
+          "id": "getting-started"
+        },
+        {
+          "type": "doc",
+          "id": "global-vs-individual-stages"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "For Modpack Developers",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "stage-configuration"
+        },
+        {
+          "type": "doc",
+          "id": "stage-modes"
+        },
+        {
+          "type": "doc",
+          "id": "stage-examples"
+        },
+        {
+          "type": "doc",
+          "id": "recipe-examples"
+        },
+        {
+          "type": "doc",
+          "id": "in-game-editor"
+        },
+        {
+          "type": "doc",
+          "id": "research-system"
+        },
+        {
+          "type": "doc",
+          "id": "stage-graph"
+        },
+        {
+          "type": "doc",
+          "id": "commands-and-permissions"
+        },
+        {
+          "type": "doc",
+          "id": "configuration"
+        },
+        {
+          "type": "doc",
+          "id": "mod-compatibility"
+        },
+        {
+          "type": "doc",
+          "id": "scripting-with-kubejs-and-crafttweaker"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Project",
+      "collapsed": false,
+      "items": [
+        {
+          "type": "doc",
+          "id": "porting-history-stages"
+        }
+      ]
+    }
+  ]
+}

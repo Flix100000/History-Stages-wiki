@@ -47,6 +47,19 @@ const config = {
           routeBasePath: 'wiki',
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+          // The live tree is the current release, not an unreleased "next" -- cutting it into a
+          // frozen folder once buried the whole site under /next/. It gets cut when 6.1 ships.
+          lastVersion: 'current',
+          versions: {
+            current: {label: '6.0.x'},
+            // Archives stay out of search engines so nobody lands on a two-year-old page from Google.
+            '5.6.x': {noIndex: true},
+            '5.5.x': {noIndex: true},
+            '5.4.x': {noIndex: true},
+            '5.3.x': {noIndex: true},
+            '5.2.x': {noIndex: true},
+            '5.0.x': {noIndex: true},
+          },
         },
         blog: {
           showReadingTime: true,
@@ -87,6 +100,9 @@ const config = {
         indexBlog: false,
         indexPages: false,
         docsRouteBasePath: ['/wiki', '/api'],
+        // Archived versions are noIndex so Google keeps sending people to the current docs.
+        // The search box would otherwise skip them too, leaving old versions unsearchable.
+        forceIgnoreNoIndex: true,
       }),
     ],
   ],
@@ -117,6 +133,16 @@ const config = {
             docsPluginId: 'api',
             position: 'left',
             label: 'API',
+          },
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownItemsAfter: [
+              {
+                href: 'https://github.com/Flix100000/History-Stages/releases',
+                label: 'All releases',
+              },
+            ],
           },
           {
             type: 'dropdown',

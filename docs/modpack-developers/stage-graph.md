@@ -3,6 +3,9 @@ title: Stage Graph
 sidebar_position: 10
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 The Stage Graph is a player-facing, interactive node graph of a modpack's progression. It shows stages as nodes connected by dependency edges, so players can see what they've unlocked, what's next, and how everything connects — without spoiling content they haven't reached yet.
 
 It is separate from the read-only Dependency Graph in the [In-Game Editor](./in-game-editor.md), which is an OP-only authoring tool. The Stage Graph is meant to be shown to every player.
@@ -49,7 +52,48 @@ Beyond the graph-wide defaults, individual stages can have their own style, opti
 *   Per-state **style overrides** (`unlocked` / `reachable` / `locked`) layered on top of the base style.
 *   A **background** the whole map takes on once the stage is unlocked — see below.
 
-Overridable fields are the same set as the TOML style blocks (shape, size, border, fill, label, checkmark, etc.). Resolution order is: built-in default → `graph.toml` defaults → the stage's own base style → the stage's per-state override. This lets a modpack creator make a single milestone stage look distinct (a hexagon, a unique color) without changing the graph's overall theme.
+Overridable fields are the same set as the TOML style blocks (shape, size, border, fill, label, checkmark, etc.). Resolution order is: built-in default → `graph.toml` defaults → the stage's own base style → the stage's per-state override. This lets a modpack creator make a single milestone stage look distinct (a hexagon, a unique color) without changing the graph's overall theme — the two tabs below show the same fields on both sides of that resolution order: the config-wide default for `unlocked` global stages, and one stage overriding it.
+
+<Tabs>
+<TabItem value="toml" label="graph.toml">
+
+```toml
+[style.global.unlocked]
+shape = "ROUNDED"
+size = 1.0
+border = "#44CC99"
+borderWidth = 2
+fill = "#2E8B62"
+fillOpacity = 0.35
+label = "DISPLAY_NAME"
+labelColor = "#DDDDDD"
+checkmark = true
+```
+
+</TabItem>
+<TabItem value="json" label="graph_stages.json">
+
+```json
+{
+  "global": {
+    "iron_age": {
+      "styles": {
+        "unlocked": {
+          "shape": "HEXAGON",
+          "border": "#E8B347",
+          "fill": "#B8791F",
+          "checkmark": true
+        }
+      }
+    }
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+Every field left out of the override — `size`, `borderWidth`, `fillOpacity`, `label`, `labelColor` here — falls through to the `graph.toml` default above rather than to some separate built-in value, which is why a milestone stage only needs to name what actually changes.
 
 ### The Background Changes As You Progress
 

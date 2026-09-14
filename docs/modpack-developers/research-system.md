@@ -1,6 +1,6 @@
 ---
 title: Research System
-sidebar_position: 6
+sidebar_position: 9
 ---
 
 History Stages implements an in-world research system for stage progression, designed to integrate seamlessly into modpacks.

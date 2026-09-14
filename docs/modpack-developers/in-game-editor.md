@@ -1,6 +1,6 @@
 ---
 title: In-Game Editor
-sidebar_position: 5
+sidebar_position: 8
 ---
 
 History Stages features a comprehensive in-game suite for modpack creators, streamlining the management of progression.
@@ -10,8 +10,8 @@ History Stages features a comprehensive in-game suite for modpack creators, stre
 The in-game editor provides a powerful set of tools for stage management, allowing modpack creators to configure their progression systems without ever leaving the game or manually editing JSON files:
 
 *   **Stage Management:** Create new stages from scratch, edit existing configurations, duplicate stages for rapid iteration, and delete stages directly within the Minecraft client. New stages prompt for a display name at creation time.
-*   **Stage Settings:** A dedicated settings screen for managing core stage metadata such as Stage ID, Display Name, and Research Time, keeping these properties separate from the lock entries. The same screen also exposes the [Stage Tier Gating](./research-system.md#stage-tier-gating) controls (`min_pedestal_tier` and `pedestal_tier_mode`), and the [Lose on Death](./stage-configuration.md#lose-on-death) toggle for individual stages, so these can be configured without editing JSON.
-*   **Folders & Organize Mode:** Stages can be sorted into nested [folders](./stage-configuration.md#folders) for large modpacks. A dedicated organize mode on the Stage Overview screen lets you tick multiple stages and folders and drag-and-drop them onto a target folder in one move; moving a folder brings its contents along automatically.
+*   **Stage Settings:** A dedicated settings screen for managing core stage metadata such as Stage ID, Display Name, and Research Time, keeping these properties separate from the lock entries. The same screen also exposes the [Stage Tier Gating](./research-system.md#stage-tier-gating) controls (`min_pedestal_tier` and `pedestal_tier_mode`), and the [Lose on Death](./stage-behavior.md#lose-on-death) toggle for individual stages, so these can be configured without editing JSON.
+*   **Folders & Organize Mode:** Stages can be sorted into nested [folders](./stage-behavior.md#folders) for large modpacks. A dedicated organize mode on the Stage Overview screen lets you tick multiple stages and folders and drag-and-drop them onto a target folder in one move; moving a folder brings its contents along automatically.
 *   **Per-Player Unlocking:** The Stage Overview screen can unlock or relock an individual stage for one specific online player, or for every online player at once, without going through the `/history individual unlock` command. This uses the same server-side logic as the command (sync, notifications, item cleanup on relock), so behaviour is identical — it only works for players who are currently online.
 *   **Searchable Registries:** Efficiently find and select items, fluids, recipes, entities, dimensions, biomes, structures and villager trades. The editor features a unified search and filter bar, supports both full registry browsing and direct selection from the player's inventory, and offers a multi-select mode with a dedicated "Selected" tab for bulk operations. The entity picker supports multi-select in the same way as the item picker. The recipe picker works differently enough to have its own section below.
 *   **Dependency Editor:** A dedicated visual interface for configuring stage prerequisites. Modpack creators can easily set up requirements such as deposited items, item tags, Entity Kills, XP Levels, Statistics, Scoreboard Objectives, or other Individual Stages, and organize them into logical groups.
@@ -126,7 +126,7 @@ A spawn lock entry is a rule rather than a checkbox, and the editor opens it as 
 
 A line under the tabs spells the whole rule out in words, so the thing being saved can be read back in one sentence rather than reconstructed from four tabs. Conditions that are not set are greyed out.
 
-→ [Stage Configuration](./stage-configuration.md#entity-control) has what each of those writes into the stage file, and the four limits worth knowing about extra biomes.
+→ [Lock Types](./lock-types.md#entity-control) has what each of those writes into the stage file, and the four limits worth knowing about extra biomes.
 
 ## Accessing the Editor
 

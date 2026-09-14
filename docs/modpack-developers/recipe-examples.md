@@ -1,6 +1,6 @@
 ---
 title: Recipe Examples
-sidebar_position: 4
+sidebar_position: 7
 ---
 
 This page collects ready-to-use crafting recipe examples for History Stages items — primarily **Research Scrolls** and the **Research Pedestal**. History Stages itself does not ship default recipes; modpack authors decide how players obtain these items.

@@ -31,7 +31,7 @@ Items, tags, mods, structures, biomes, dimensions and the three entity locks are
 
 ¹ Individually only at the stations that know which player is standing at them — crafting table, the 2×2 inventory grid, stonecutter, smithing table. → [Global vs Individual Stages](../general/global-vs-individual-stages.md) has the full list of what a per-player recipe gate does and does not reach.
 
-² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Stage Configuration](../modpack-developers/stage-configuration.md#zones).
+² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Zones](../modpack-developers/zones.md).
 
 Blocks have no category of their own — a block is gated through its item id in `historystages:items`.
 

@@ -1,6 +1,6 @@
 ---
 title: Stage Graph
-sidebar_position: 7
+sidebar_position: 10
 ---
 
 The Stage Graph is a player-facing, interactive node graph of a modpack's progression. It shows stages as nodes connected by dependency edges, so players can see what they've unlocked, what's next, and how everything connects — without spoiling content they haven't reached yet.
@@ -26,7 +26,7 @@ The screen title defaults to a translation key (`graph.historystages.title`) but
 
 A stage hidden by the current mode also hides its edges — there is no placeholder or "???" node. This is a **display filter only**: it improves readability and avoids spoilers, but it is not a security boundary, since stage data is already present on the client.
 
-Two related toggles: `respectHiddenDisplay` (default `true`) applies each stage's [Hidden Display](./stage-configuration.md#hidden-display) settings inside the graph too, and `showIndividualStages` (default `true`) controls whether individual stages appear alongside global ones.
+Two related toggles: `respectHiddenDisplay` (default `true`) applies each stage's [Hidden Display](./stage-behavior.md#hidden-display) settings inside the graph too, and `showIndividualStages` (default `true`) controls whether individual stages appear alongside global ones.
 
 ## Layout and Appearance
 

@@ -1,6 +1,6 @@
 ---
 title: Scripting (KubeJS & CraftTweaker)
-sidebar_position: 11
+sidebar_position: 14
 ---
 
 History Stages talks to both scripting mods. A script can **read** stage state, **change** it, and

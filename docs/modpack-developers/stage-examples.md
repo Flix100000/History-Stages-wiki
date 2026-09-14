@@ -1,6 +1,6 @@
 ---
 title: Stage Examples
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 This page provides various examples of stage configurations in JSON format to demonstrate the capabilities of History Stages. These examples can be used as templates for creating custom progression systems.

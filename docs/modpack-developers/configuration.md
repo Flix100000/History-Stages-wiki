@@ -1,6 +1,6 @@
 ---
 title: Configuration (TOML)
-sidebar_position: 9
+sidebar_position: 12
 ---
 
 History Stages keeps its settings in `config/historystages/settings/`. They can be edited by hand or through the in-game config editor, which writes the same files.

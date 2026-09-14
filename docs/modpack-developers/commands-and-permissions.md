@@ -1,6 +1,6 @@
 ---
 title: Commands & Permissions
-sidebar_position: 8
+sidebar_position: 11
 ---
 
 History Stages provides a set of administrative commands for managing stages, configurations, and player progression. These commands are intended for server operators and modpack developers.

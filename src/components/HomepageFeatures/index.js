@@ -1,51 +1,93 @@
-import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
+// Copy trimmed from the mod's own Modrinth/CurseForge listing — the actual pitch,
+// not a paraphrase of it. Screenshots are the real gallery images from there too.
 const FeatureList = [
   {
-    title: 'Research-Based Progression',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Research System',
+    image: 'research-pedestal.webp',
     description: (
       <>
-        Lock items, recipes, dimensions, mobs, and loot behind custom eras.
-        Players unlock each one by researching it at a Research Pedestal.
+        Players bring Research Scrolls to a Research Pedestal and spend time
+        researching the next era. Four pedestal tiers, placeable boosters, and a
+        dependency system covering XP, kills, stats, and more.
       </>
     ),
+    to: '/wiki/modpack-developers/in-game-tools/research-system',
   },
   {
     title: 'In-Game Editor',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    image: 'in-game-editor.webp',
     description: (
       <>
-        Build and edit the entire progression tree without leaving the game —
-        stages, dependencies, locks, and the Stage Graph players see.
+        Build your entire stage setup without touching a config file — folders,
+        drag-to-organize, per-player unlocks, and a live-preview tooltip
+        designer, all from the pause menu.
       </>
     ),
+    to: '/wiki/modpack-developers/in-game-tools/in-game-editor',
+  },
+  {
+    title: 'Stage Graph',
+    image: 'stage-graph.webp',
+    description: (
+      <>
+        A progression map players open from the pause menu: nodes for stages,
+        edges for dependencies, colour-coded Unlocked, Reachable, and Locked.
+        Off by default — how much structure to reveal is your call.
+      </>
+    ),
+    to: '/wiki/modpack-developers/in-game-tools/stage-graph',
+  },
+  {
+    title: 'The Research Record',
+    image: 'open-scroll.webp',
+    description: (
+      <>
+        An opened scroll is a real, readable document with chapters for items,
+        creatures, and world. Lay it on a lectern and anyone can read it —
+        obscured mode turns locked entries into silhouettes.
+      </>
+    ),
+    to: '/wiki/modpack-developers/in-game-tools/research-system#the-open-scroll-document',
   },
   {
     title: 'Addon Platform',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    icon: true,
     description: (
       <>
-        Other mods register their own lock categories, requirements, and
-        editor tabs through NeoForge events — no fork, no mixin.
+        Other mods register their own lock categories, requirements, and editor
+        tabs through NeoForge events — no fork, no mixin, same widgets the
+        built-in tabs are made of.
       </>
     ),
+    to: '/api/addon-development',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({title, image, icon, description, to}) {
+  const imageUrl = useBaseUrl(image ? `/img/screenshots/${image}` : '/img/icon.png');
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+    <Link to={to} className={styles.card}>
+      <div className={styles.cardMedia}>
+        <img
+          src={imageUrl}
+          alt=""
+          loading="lazy"
+          className={icon ? styles.cardIcon : styles.cardScreenshot}
+        />
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className={styles.cardBody}>
+        <Heading as="h3" className={styles.cardTitle}>
+          {title}
+        </Heading>
+        <p className={styles.cardDescription}>{description}</p>
+        <span className={styles.cardLink}>Learn more →</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -53,7 +95,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className={styles.grid}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

@@ -1,6 +1,6 @@
 ---
 title: Stage Modes
-sidebar_position: 5
+sidebar_position: 2
 ---
 
 Every stage has a **mode** that controls how it gets unlocked and whether a Research Scroll is generated for it. The mode is set in the stage JSON using the `"mode"` key. If the key is absent, the stage behaves as `default`.

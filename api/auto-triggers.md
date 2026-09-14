@@ -8,7 +8,7 @@ sidebar_position: 4
 
 An **auto-trigger** answers "what unlocks this stage by itself?" — no pedestal, no command, no quest reward.
 
-The built-in types cover entering a biome, crafting an item, killing something, and so on; they are listed with their JSON parameters on **[Stage Modes](/docs/modpack-developers/stage-modes)**. An addon that owns some other notion of progress — a relic found, a ritual completed, a machine built — registers a type of its own, and from then on it travels the same path as a built-in: the same `auto_trigger` block in the stage file, the same editor, the same progress storage.
+The built-in types cover entering a biome, crafting an item, killing something, and so on; they are listed with their JSON parameters on **[Stage Modes](/docs/modpack-developers/stage-basics/stage-modes)**. An addon that owns some other notion of progress — a relic found, a ritual completed, a machine built — registers a type of its own, and from then on it travels the same path as a built-in: the same `auto_trigger` block in the stage file, the same editor, the same progress storage.
 
 ---
 

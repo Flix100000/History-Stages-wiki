@@ -1,6 +1,6 @@
 ---
 title: Stage Graph
-sidebar_position: 10
+sidebar_position: 3
 ---
 
 import Tabs from '@theme/Tabs';
@@ -8,11 +8,11 @@ import TabItem from '@theme/TabItem';
 
 The Stage Graph is a player-facing, interactive node graph of a modpack's progression. It shows stages as nodes connected by dependency edges, so players can see what they've unlocked, what's next, and how everything connects — without spoiling content they haven't reached yet.
 
-It is separate from the read-only Dependency Graph in the [In-Game Editor](./in-game-editor.md), which is an OP-only authoring tool. The Stage Graph is meant to be shown to every player.
+It is separate from the read-only Dependency Graph in the [In-Game Editor](/docs/modpack-developers/in-game-tools/in-game-editor), which is an OP-only authoring tool. The Stage Graph is meant to be shown to every player.
 
 ## Enabling It
 
-The Stage Graph is **off by default**. A modpack creator enables it by setting `enabled = true` under `[general]` in `graph.toml`, either by hand or through the **Graph** tab of the in-game [Config Editor](./in-game-editor.md#key-capabilities). Once enabled, a "Stage Graph" button appears on the vanilla pause menu for every player, next to the (still OP-only) editor button.
+The Stage Graph is **off by default**. A modpack creator enables it by setting `enabled = true` under `[general]` in `graph.toml`, either by hand or through the **Graph** tab of the in-game [Config Editor](/docs/modpack-developers/in-game-tools/in-game-editor#key-capabilities). Once enabled, a "Stage Graph" button appears on the vanilla pause menu for every player, next to the (still OP-only) editor button.
 
 The screen title defaults to a translation key (`graph.historystages.title`) but can be set to custom rich text — including `&`-style color codes — via the same rich-text dialog used elsewhere in the editor.
 
@@ -29,7 +29,7 @@ The screen title defaults to a translation key (`graph.historystages.title`) but
 
 A stage hidden by the current mode also hides its edges — there is no placeholder or "???" node. This is a **display filter only**: it improves readability and avoids spoilers, but it is not a security boundary, since stage data is already present on the client.
 
-Two related toggles: `respectHiddenDisplay` (default `true`) applies each stage's [Hidden Display](./stage-behavior.md#hidden-display) settings inside the graph too, and `showIndividualStages` (default `true`) controls whether individual stages appear alongside global ones.
+Two related toggles: `respectHiddenDisplay` (default `true`) applies each stage's [Hidden Display](/docs/modpack-developers/locking-zones/stage-behavior#hidden-display) settings inside the graph too, and `showIndividualStages` (default `true`) controls whether individual stages appear alongside global ones.
 
 ## Layout and Appearance
 
@@ -120,4 +120,4 @@ Four things about it are worth knowing, because each of them otherwise reads as 
 
 ## Configuring In-Game
 
-`graph.toml` can be edited entirely in-game via the **Graph** tab of the [Config Editor](./in-game-editor.md#key-capabilities), alongside the existing Client and Common tabs. Changes save immediately and sync to connected clients, same as the other config tabs.
+`graph.toml` can be edited entirely in-game via the **Graph** tab of the [Config Editor](/docs/modpack-developers/in-game-tools/in-game-editor#key-capabilities), alongside the existing Client and Common tabs. Changes save immediately and sync to connected clients, same as the other config tabs.

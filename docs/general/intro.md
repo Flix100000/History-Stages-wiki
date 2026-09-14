@@ -41,9 +41,9 @@ History Stages allows for the restriction of various game elements until specifi
 Modpack creators can define stages and manage configurations through two methods:
 
 1.  **In-Game Editor:** A graphical interface accessible via the pause menu (requires OP permissions) for creating and modifying stages without editing files directly.
-2.  **JSON Configuration:** Manual editing of `.json` files located in the `config/historystages/global/` and `config/historystages/individual/` directories. Files can be organized into nested folders for large modpacks — see [Folders](../modpack-developers/stage-behavior.md#folders).
+2.  **JSON Configuration:** Manual editing of `.json` files located in the `config/historystages/global/` and `config/historystages/individual/` directories. Files can be organized into nested folders for large modpacks — see [Folders](/docs/modpack-developers/locking-zones/stage-behavior#folders).
 
-Large modpacks can also expose an interactive **[Stage Graph](../modpack-developers/stage-graph.md)** to players from the pause menu, visualizing the whole progression tree.
+Large modpacks can also expose an interactive **[Stage Graph](/docs/modpack-developers/in-game-tools/stage-graph)** to players from the pause menu, visualizing the whole progression tree.
 
 ## Community & Support
 

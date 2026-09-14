@@ -20,7 +20,7 @@ sidebar_position: 3
 | `stat` | A tracked Minecraft statistic has reached a value. | Individual |
 | `scoreboard` | A scoreboard objective satisfies a numeric comparison. | Global, Individual |
 
-Requirements sit inside dependency groups on a stage — every entry in a group has to be met before the group counts as satisfied. → [Stage Behavior](/docs/modpack-developers/stage-behavior#stage-dependencies) covers the packmaker-facing side of that. Note that a requirement ID is a registry key, not a JSON field name: the built-ins keep their entries in typed fields whose names do not always match (`entity_kill` writes into `entity_kills`, `item_tag` into `item_tags`, `individual_stage` into `individual_stages`). Addon requirements have no such split — their ID is also the key they store under.
+Requirements sit inside dependency groups on a stage — every entry in a group has to be met before the group counts as satisfied. → [Stage Behavior](/docs/modpack-developers/locking-zones/stage-behavior#stage-dependencies) covers the packmaker-facing side of that. Note that a requirement ID is a registry key, not a JSON field name: the built-ins keep their entries in typed fields whose names do not always match (`entity_kill` writes into `entity_kills`, `item_tag` into `item_tags`, `individual_stage` into `individual_stages`). Addon requirements have no such split — their ID is also the key they store under.
 
 An addon requirement is stored, checked, and displayed exactly like a built-in. The one structural difference is where the entries live: a built-in is a view over a typed field on the dependency group, while an addon requirement has no such field and stores through the group's raw `addons` block instead — a map of requirement ID to raw JSON.
 

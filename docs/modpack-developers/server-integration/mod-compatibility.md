@@ -1,6 +1,6 @@
 ---
 title: Mod Compatibility
-sidebar_position: 13
+sidebar_position: 5
 ---
 
 History Stages recognises a number of widely used mods and adjusts its behaviour when they are
@@ -23,7 +23,7 @@ without it.
 
 ## Fluid locks and other mods' tanks
 
-A [fluid lock](./lock-types.md#fluid-locking) reaches further into other mods than most lock types, so it is worth knowing where it stops.
+A [fluid lock](/docs/modpack-developers/locking-zones/world-locks#fluid-locking) reaches further into other mods than most lock types, so it is worth knowing where it stops.
 
 **What it does reach:** any item that reports what it is carrying. That is the vanilla bucket, every modded bucket, and every filled tank item in the pack, without a single item ID being listed. It also reaches the recipes — gating a fluid takes every recipe producing or consuming it out of crafting and out of the recipe browser, including recipes belonging to other mods' machines.
 
@@ -33,7 +33,7 @@ A [fluid lock](./lock-types.md#fluid-locking) reaches further into other mods th
 *   **Foreign display names.** A name or tooltip override on a fluid entry is applied to the container item, so another mod's tank GUI — and Jade's tank readout — keep showing the fluid's real name.
 
 **KubeJS and CraftTweaker** are integrations too, but they are big enough to have their own page:
-**→ [Scripting (KubeJS & CraftTweaker)](./scripting-with-kubejs-and-crafttweaker.md)**.
+**→ [Scripting (KubeJS & CraftTweaker)](/docs/modpack-developers/server-integration/scripting-with-kubejs-and-crafttweaker)**.
 
 ---
 

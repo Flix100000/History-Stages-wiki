@@ -1,6 +1,6 @@
 ---
 title: Research System
-sidebar_position: 9
+sidebar_position: 2
 ---
 
 History Stages implements an in-world research system for stage progression, designed to integrate seamlessly into modpacks.
@@ -95,7 +95,7 @@ Research Scrolls are key items for unlocking stages. Different types of scrolls 
 
 ## Configuring the Scroll Tooltip
 
-The tooltip shown on a Research Scroll is fully configurable via `historystages/settings/gameplay.toml` under `scroll_tooltip.lines` (also editable in-game through a dedicated screen in the [Config Editor](./in-game-editor.md#key-capabilities)). Each entry is a pipe-delimited string: `id|enabled|spacerBefore|style|text`.
+The tooltip shown on a Research Scroll is fully configurable via `historystages/settings/gameplay.toml` under `scroll_tooltip.lines` (also editable in-game through a dedicated screen in the [Config Editor](/docs/modpack-developers/in-game-tools/in-game-editor#key-capabilities)). Each entry is a pipe-delimited string: `id|enabled|spacerBefore|style|text`.
 
 *   `id` — which section this line controls. The item name (`name`) is always shown first and cannot be reordered. The movable sections are, in configurable order: `individual_badge`, `owner`, `info1`, `info2`, `tier`, `dependencies`. The dependency block itself is built from further sub-templates (`dep.header`, `dep.group_header`, `dep.item`, `dep.stage`, `dep.individual`, `dep.xp`, `dep.separator`) and icon/color options (`dep.icon_fulfilled`, `dep.icon_open`, `dep.icon_unknown`, `dep.color_fulfilled`, `dep.color_open`).
 *   `enabled` — whether the section is shown at all.
@@ -130,7 +130,7 @@ Because the chapter is no longer only about places, its counter on the overview 
 
 Recipes, mods, mod exceptions and addon categories are deliberately **not** on the scroll. A scroll is a player-facing description of what a stage holds back, and those four are authoring concepts rather than things a player can point at.
 
-Chapters, the overview layout, search, entry IDs, sort order, and page ink colors are all configurable under `open_scroll` in `historystages/settings/gameplay.toml` — see [Configuration](./configuration.md). An open scroll can be resealed back into a closed Research Scroll via a `reseal_scroll` recipe.
+Chapters, the overview layout, search, entry IDs, sort order, and page ink colors are all configurable under `open_scroll` in `historystages/settings/gameplay.toml` — see [Configuration](/docs/modpack-developers/server-integration/configuration). An open scroll can be resealed back into a closed Research Scroll via a `reseal_scroll` recipe.
 
 ### Reading from a Lectern
 
@@ -142,7 +142,7 @@ History Stages does not provide default crafting recipes for the Research Pedest
 
 *   **FTB Quests:** Scrolls can be distributed as rewards for completing questlines.
 *   **Loot Tables:** Scrolls can be added as drops from mobs or as treasure in structures.
-*   **Custom Recipes:** Scripting mods such as [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs) or [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker), or datapacks, can be used to create custom crafting recipes. See the [Recipe Examples](./recipe-examples.md) page for copy-paste templates.
+*   **Custom Recipes:** Scripting mods such as [KubeJS](https://www.curseforge.com/minecraft/mc-mods/kubejs) or [CraftTweaker](https://www.curseforge.com/minecraft/mc-mods/crafttweaker), or datapacks, can be used to create custom crafting recipes. See the [Recipe Examples](/docs/modpack-developers/stage-basics/recipe-examples) page for copy-paste templates.
 - **Admin Commands:** For administrative purposes or testing, scrolls can be given to players using the command:
   - **Pre-1.20.5:** `/give @s historystages:research_scroll{StageResearch:"your_stage_id"}`
   - **1.20.5+ / 1.21.x:** `/give @s historystages:research_scroll[minecraft:custom_data={StageResearch:"your_stage_id"}]`

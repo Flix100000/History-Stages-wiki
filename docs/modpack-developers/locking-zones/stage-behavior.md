@@ -1,6 +1,6 @@
 ---
 title: Stage Behavior
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 Settings that shape how a stage behaves once it exists, rather than what it locks: how locked content is
@@ -100,7 +100,7 @@ Stage JSON files can be organized into nested subfolders under `config/historyst
 
 Folder and file names may contain letters, digits, `-`, and `_`, but cannot start with `_` (an underscore prefix opts a file or folder out of loading — see below) and cannot use `..`, backslashes, or drive letters. Folders can be nested up to 8 levels deep.
 
-The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](./in-game-editor.md#key-capabilities).
+The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](/docs/modpack-developers/in-game-tools/in-game-editor#key-capabilities).
 
 ## Ignored Files
 

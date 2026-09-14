@@ -44,6 +44,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: 'wiki',
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
         },
@@ -77,6 +78,17 @@ const config = {
         editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
       }),
     ],
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: ['/wiki', '/api'],
+      }),
+    ],
   ],
 
   themeConfig:
@@ -95,9 +107,9 @@ const config = {
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'docsSidebar',
+            sidebarId: 'wikiSidebar',
             position: 'left',
-            label: 'Docs',
+            label: 'Wiki',
           },
           {
             type: 'docSidebar',
@@ -107,9 +119,35 @@ const config = {
             label: 'API',
           },
           {
-            href: 'https://github.com/Flix100000/History-Stages',
-            label: 'GitHub',
+            type: 'dropdown',
+            label: 'Download',
+            position: 'left',
+            items: [
+              {
+                label: 'CurseForge',
+                href: 'https://www.curseforge.com/minecraft/mc-mods/history-stages',
+              },
+              {
+                label: 'Modrinth',
+                href: 'https://modrinth.com/mod/history-stages',
+              },
+              {
+                label: 'GitHub Releases',
+                href: 'https://github.com/Flix100000/History-Stages/releases',
+              },
+            ],
+          },
+          {
+            href: 'https://discord.gg/BeZzxyZ9c4',
             position: 'right',
+            className: 'header-icon-link header-discord-link',
+            'aria-label': 'Discord',
+          },
+          {
+            href: 'https://github.com/Flix100000/History-Stages',
+            position: 'right',
+            className: 'header-icon-link header-github-link',
+            'aria-label': 'GitHub',
           },
         ],
       },
@@ -117,11 +155,32 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Wiki',
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/general/getting-started',
+                to: '/wiki/general/getting-started',
+              },
+              {
+                label: 'Addon API',
+                to: '/api/addon-development',
+              },
+            ],
+          },
+          {
+            title: 'Download',
+            items: [
+              {
+                label: 'CurseForge',
+                href: 'https://www.curseforge.com/minecraft/mc-mods/history-stages',
+              },
+              {
+                label: 'Modrinth',
+                href: 'https://modrinth.com/mod/history-stages',
+              },
+              {
+                label: 'GitHub Releases',
+                href: 'https://github.com/Flix100000/History-Stages/releases',
               },
             ],
           },
@@ -132,19 +191,37 @@ const config = {
                 label: 'Discord',
                 href: 'https://discord.gg/BeZzxyZ9c4',
               },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/Flix100000/History-Stages',
+              },
             ],
           },
           {
             title: 'More',
             items: [
               {
-                label: 'Mod Repository',
-                href: 'https://github.com/Flix100000/History-Stages',
+                label: 'License',
+                href: 'https://github.com/Flix100000/History-Stages/blob/neoforge-1.21.X/LICENSE.txt',
+              },
+              {
+                label: 'Contributing',
+                href: 'https://github.com/Flix100000/History-Stages/blob/neoforge-1.21.X/CONTRIBUTING.md',
+              },
+              {
+                label: 'Security Policy',
+                href: 'https://github.com/Flix100000/History-Stages/blob/neoforge-1.21.X/SECURITY.md',
+              },
+              {
+                label: 'Report a Bug',
+                href: 'https://github.com/Flix100000/History-Stages/issues',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} History Stages. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} History Stages. Built with Docusaurus.<br />
+          This is an unofficial, fan-made project. Not affiliated with Mojang Studios or Microsoft.
+          Minecraft is a trademark of Mojang Synergies AB.`,
       },
       prism: {
         theme: prismThemes.github,

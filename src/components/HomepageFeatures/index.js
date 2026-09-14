@@ -4,32 +4,32 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'Research-Based Progression',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Lock items, recipes, dimensions, mobs, and loot behind custom eras.
+        Players unlock each one by researching it at a Research Pedestal.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'In-Game Editor',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Build and edit the entire progression tree without leaving the game —
+        stages, dependencies, locks, and the Stage Graph players see.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Addon Platform',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Other mods register their own lock categories, requirements, and
+        editor tabs through NeoForge events — no fork, no mixin.
       </>
     ),
   },

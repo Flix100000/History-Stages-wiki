@@ -62,7 +62,7 @@ To create a structured progression path, stages can demand that things be done b
 ]
 ```
 
-Every list is optional — leave out what the group does not use. An `addons` block can sit alongside them for requirement kinds owned by other mods; see [Requirements](../addon-developers/requirements.md).
+Every list is optional — leave out what the group does not use. An `addons` block can sit alongside them for requirement kinds owned by other mods; see [Requirements](/api/requirements).
 
 | Field | Demands |
 | :--- | :--- |
@@ -76,7 +76,7 @@ Every list is optional — leave out what the group does not use. An `addons` bl
 | `stats` | A tracked statistic has reached `min_value`. |
 | `scoreboard` | An objective satisfies a comparison. `op` is one of `>=`, `<=`, `==`, `>`, `<`, `!=`. Without `score_holder`, the acting player's own score is read. |
 
-Four of these need a single player to measure and are therefore **individual-only**: `advancements`, `xp_level`, `entity_kills` and `stats`. Written into a global stage by hand they are skipped rather than checked against whoever happened to trigger it. The rest — items, item tags, stages, individual stages and scoreboard — work in both scopes. → [Requirements](../addon-developers/requirements.md) has the same split from the addon side.
+Four of these need a single player to measure and are therefore **individual-only**: `advancements`, `xp_level`, `entity_kills` and `stats`. Written into a global stage by hand they are skipped rather than checked against whoever happened to trigger it. The rest — items, item tags, stages, individual stages and scoreboard — work in both scopes. → [Requirements](/api/requirements) has the same split from the addon side.
 
 ### AND, OR, and where the line runs
 

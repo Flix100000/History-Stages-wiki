@@ -65,6 +65,20 @@ const config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: 'api',
+        path: 'api',
+        routeBasePath: 'api',
+        sidebarPath: './sidebarsApi.js',
+        editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -84,6 +98,13 @@ const config = {
             sidebarId: 'docsSidebar',
             position: 'left',
             label: 'Docs',
+          },
+          {
+            type: 'docSidebar',
+            sidebarId: 'apiSidebar',
+            docsPluginId: 'api',
+            position: 'left',
+            label: 'API',
           },
           {
             type: 'docsVersionDropdown',

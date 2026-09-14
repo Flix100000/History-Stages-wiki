@@ -41,8 +41,8 @@ A [fluid lock](./lock-types.md#fluid-locking) reaches further into other mods th
 
 Writing a mod rather than a pack? Two starting points:
 
-- **[Stage State & Events](../addon-developers/stage-state-and-events.md)** — read and change stage state, and react when
+- **[Stage State & Events](/api/stage-state-and-events)** — read and change stage state, and react when
   it changes. This is what you want if your mod only needs to *know* about stages.
-- **[Addon Development](../addon-developers/addon-development.md)** — register your own gated content, requirements,
+- **[Addon Development](/api/addon-development)** — register your own gated content, requirements,
   auto-triggers, per-stage settings and config sections, each with a native tab in the in-game
   editor. NeoForge, 6.0.0 and up.

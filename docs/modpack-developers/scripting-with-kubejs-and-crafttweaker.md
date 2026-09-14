@@ -258,6 +258,6 @@ Then the id is yours, it never moves, and picking it in the editor sticks.
 
 ---
 
-**See also:** [Stage State & Events](../addon-developers/stage-state-and-events.md) for the Java side of the same events ·
-[Lock Categories](../addon-developers/lock-categories.md) for what the category ids mean ·
+**See also:** [Stage State & Events](/api/stage-state-and-events) for the Java side of the same events ·
+[Lock Categories](/api/lock-categories) for what the category ids mean ·
 [Mod Compatibility](./mod-compatibility.md) for the other integrations

@@ -88,7 +88,7 @@ At those four, an individual stage does exactly what a global one does: the resu
 - The crafter block, hopper feeds, and mod autocrafters
 - Any mod station with its own menu whose recipe type has not been registered as per-player-gateable
 
-**Another mod can add to that list.** Since 6.0.0 a mod may declare one of its own recipe types per-player-gateable, and the editor then offers it like the built-in three. That is a promise about the mod's own station — that a player is standing at it and that our hooks see them — so the list above is the vanilla floor rather than the whole of it. → [Addon Development](../addon-developers/addon-development.md).
+**Another mod can add to that list.** Since 6.0.0 a mod may declare one of its own recipe types per-player-gateable, and the editor then offers it like the built-in three. That is a promise about the mod's own station — that a player is standing at it and that our hooks see them — so the list above is the vanilla floor rather than the whole of it. → [Addon Development](/api/addon-development).
 
 **This means a recipe locked by an individual stage can still be produced in an autocrafter.** That is acceptable for progression design — a professions system, a research tree — and it is not cheat protection. If you need something to be truly unobtainable, use a global stage.
 

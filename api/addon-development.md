@@ -46,7 +46,7 @@ dependencies {
 
 The version string is the Modrinth version, and 6.0.0 is not published on Modrinth yet, so this exact coordinate is confirmed at release.
 
-History Stages has **Lootr** as a required dependency, so your dev environment needs it too — History Stages will not load without it. See [Mod Compatibility](/docs/next/modpack-developers/mod-compatibility) for why.
+History Stages has **Lootr** as a required dependency, so your dev environment needs it too — History Stages will not load without it. See [Mod Compatibility](/docs/modpack-developers/mod-compatibility) for why.
 
 ## Declaring it in your mods.toml
 

@@ -86,6 +86,10 @@ const config = {
             label: 'Docs',
           },
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/Flix100000/History-Stages',
             label: 'GitHub',
             position: 'right',

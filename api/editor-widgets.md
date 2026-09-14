@@ -50,7 +50,9 @@ The candidates supplier is queried on every open rather than cached, so a list t
 
 `PickerOverlay` (`net.bananemdnsa.historystages.api.editor.widget.PickerOverlay`) is the interface underneath, for building your own. It names what a host screen needs from any overlay — `show`, `hide`, `isVisible`, `setFilter`, `render`, and the input methods `mouseClicked`, `mouseDragged`, `mouseReleased`, `mouseScrolled`, `keyPressed`, `charTyped`. `AbstractSearchableList<T>` implements it, so a tier-2 subclass gets the whole set for free, and `EditorTab.activeOverlay()` returns this type rather than a concrete picker — which is what lets a tab put up a dropdown of its own beside the Add picker and have the host render and feed both.
 
-> **Note:** What a tab hands its picker back through is `PickerFactory` — `PickerOverlay create(Consumer<String> onSelect, Supplier<Collection<String>> alreadyAdded)`. Configuration belongs in the factory rather than in the tab, because it differs per category. Passing `alreadyAdded` is what makes the picker's **Hide already added** filter option exist at all: `AbstractSearchableList` registers that option only when the supplier is non-null, and consults the supplier when a maintainer switches it on. It hides those entries rather than greying them out, and it is off unless toggled.
+:::note
+**Note:** What a tab hands its picker back through is `PickerFactory` — `PickerOverlay create(Consumer<String> onSelect, Supplier<Collection<String>> alreadyAdded)`. Configuration belongs in the factory rather than in the tab, because it differs per category. Passing `alreadyAdded` is what makes the picker's **Hide already added** filter option exist at all: `AbstractSearchableList` registers that option only when the supplier is non-null, and consults the supplier when a maintainer switches it on. It hides those entries rather than greying them out, and it is off unless toggled.
+:::
 
 ## Right-click actions on entries
 
@@ -76,7 +78,9 @@ An action takes the **row index**, not the entry. The tab already owns its rows,
 | `openOverlay(PickerOverlay)` | Ask the host to show an overlay and feed it input until it hides itself. |
 | `EntryActionContext.dataOnly(int, Runnable)` | Builds a context with both sinks inert — so a unit test can construct one at all. |
 
-> **Note:** Call the methods, never the record accessors. `ctx.dirtySink()` hands back the `Runnable` and does nothing; it compiles, throws nothing, and the change is silently never registered. The same mistake on a tooltip sink once disabled the editor's whole add menu. It applies to `TabRenderContext.tooltip(...)` as well.
+:::warning
+**Note:** Call the methods, never the record accessors. `ctx.dirtySink()` hands back the `Runnable` and does nothing; it compiles, throws nothing, and the change is silently never registered. The same mistake on a tooltip sink once disabled the editor's whole add menu. It applies to `TabRenderContext.tooltip(...)` as well.
+:::
 
 Four built-in popups can be offered from an addon's menu rather than rebuilt:
 

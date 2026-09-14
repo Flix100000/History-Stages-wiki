@@ -3,8 +3,10 @@ title: Addon Development
 sidebar_position: 1
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **History Stages 6.0.0** is an addon platform: another mod can register its own kind of gated content, its own way to earn a stage, and its own tabs in the in-game editor, without a fork and without a mixin.
 
@@ -46,7 +48,7 @@ dependencies {
 
 The version string is the Modrinth version, and 6.0.0 is not published on Modrinth yet, so this exact coordinate is confirmed at release.
 
-History Stages has **Lootr** as a required dependency, so your dev environment needs it too — History Stages will not load without it. See [Mod Compatibility](/docs/modpack-developers/server-integration/mod-compatibility) for why.
+History Stages has **Lootr** as a required dependency, so your dev environment needs it too — History Stages will not load without it. See [Mod Compatibility](/wiki/modpack-developers/server-integration/mod-compatibility) for why.
 
 ## Declaring it in your mods.toml
 
@@ -91,9 +93,13 @@ public final class MyLocks {
 
 **What is still missing: asking.** Nothing is gated yet. History Stages has no idea when a quest reward is about to be handed out — the addon owns that moment, hooks it itself, and calls `CategoryLocks.isLockedForPlayer(...)` there. Which stages to consult, global versus individual, and what this player has unlocked all stay on the History Stages side. → [Lock Categories](./lock-categories.md).
 
-> **Note:** The `historystages` namespace is reserved for the built-in categories. An addon namespaces its ids with its own mod id (`yourmodid:quest_rewards`); `build()` rejects an id that has no namespace or uses the reserved one.
+:::note
+**Note:** The `historystages` namespace is reserved for the built-in categories. An addon namespaces its ids with its own mod id (`yourmodid:quest_rewards`); `build()` rejects an id that has no namespace or uses the reserved one.
+:::
 
-> **This example used to gate villager trades, and no longer does.** Merchant offers are a built-in category now — `historystages:trades`, `historystages:trade_professions` and `historystages:trade_levels`, all three sharing one editor tab — so an addon reaching for them would be rebuilding what ships. The pattern is unchanged; only the example moved to something History Stages still knows nothing about.
+:::note
+**This example used to gate villager trades, and no longer does.** Merchant offers are a built-in category now — `historystages:trades`, `historystages:trade_professions` and `historystages:trade_levels`, all three sharing one editor tab — so an addon reaching for them would be rebuilding what ships. The pattern is unchanged; only the example moved to something History Stages still knows nothing about.
+:::
 
 ## Recipe types
 
@@ -139,11 +145,13 @@ modEventBus.addListener(RegisterIndividualRecipeSupportEvent.class,
         event -> event.register("mymod:assembler"));
 ```
 
-> **Only register a type whose station has its own menu.** An individual stage gates a recipe by
-> asking who is crafting, and that question has an answer only while a player is standing at the
-> station with its screen open. A furnace, a hopper or an autocrafter resolves recipes with nobody
-> there. Registering such a type makes the editor offer a per-player lock that cannot work: the
-> entry is written to the stage file and then silently does nothing.
+:::tip
+**Only register a type whose station has its own menu.** An individual stage gates a recipe by
+asking who is crafting, and that question has an answer only while a player is standing at the
+station with its screen open. A furnace, a hopper or an autocrafter resolves recipes with nobody
+there. Registering such a type makes the editor offer a per-player lock that cannot work: the
+entry is written to the stage file and then silently does nothing.
+:::
 
 Vanilla seeds three — crafting, stonecutting and smithing. Everything else is global-only, which
 is why the recipe picker on an individual stage offers fewer recipes than on a global one, and

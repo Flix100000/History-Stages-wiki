@@ -6,7 +6,7 @@ sidebar_position: 1
 Beyond the basic `items`, `tags`, `mods`, `recipes`, and `dimensions` fields, History Stages supports NBT-
 and action-level control over items and tags. → [World Locks](./world-locks.md) covers fluids, biomes and
 structure generation; → [Entity & Trade Locks](./entity-and-trade-locks.md) covers mobs and merchants;
-→ [Zones](/docs/modpack-developers/locking-zones/zones) covers player-drawn areas, which — because every zone carries its own independent
+→ [Zones](/wiki/modpack-developers/locking-zones/zones) covers player-drawn areas, which — because every zone carries its own independent
 rules rather than a server-wide config — get their own page too.
 
 ## NBT-Specific Item Locking
@@ -67,7 +67,9 @@ Tag entries support the same `nbt` and `components` criteria as item entries. Wh
 }
 ```
 
-> **Note:** Tag entries with an NBT criterion are skipped in code paths where no ItemStack is available (e.g., loot table checks without context), because NBT matching requires an actual stack. Plain string tag entries remain unaffected.
+:::note
+**Note:** Tag entries with an NBT criterion are skipped in code paths where no ItemStack is available (e.g., loot table checks without context), because NBT matching requires an actual stack. Plain string tag entries remain unaffected.
+:::
 
 ## Per-Entry Action Locking (`unlock_actions`)
 
@@ -89,11 +91,15 @@ The recognised action names, with the labels the editor shows for them:
 | `trade` | Trade | Buying or selling it at a merchant. |
 | `icon` | Icon | The padlock overlay drawn on the slot. |
 
-> **`trade` was added in 6.0 and changes existing files.** It gates buying or selling the item at any merchant, wherever that item turns up. Because `unlock_actions` stores the actions that stay *free*, an action nobody could have listed before counts as locked in every file written earlier: an entry someone narrowed to `["use"]` gates trading as well from this version onwards. That is the intended reading — a narrowed entry means "only this" — but it is worth knowing before a pack updates. There is deliberately no migration for it.
->
-> Two smaller consequences travel with it. The result slot of a trade window is now judged by `trade` rather than by `pickup`, so an entry that allowed pickup in order to allow trading has to say `trade` instead. And the extra action costs room in the stage's network payload: a stage made entirely of narrowed item entries now holds about 544 of them rather than 581.
+:::warning
+**`trade` was added in 6.0 and changes existing files.** It gates buying or selling the item at any merchant, wherever that item turns up. Because `unlock_actions` stores the actions that stay *free*, an action nobody could have listed before counts as locked in every file written earlier: an entry someone narrowed to `["use"]` gates trading as well from this version onwards. That is the intended reading — a narrowed entry means "only this" — but it is worth knowing before a pack updates. There is deliberately no migration for it.
 
-> **`place` vs `use`:** These two actions are distinct. `place` gates block placement — when locked, the item cannot be placed as a block. `use` gates right-click usage (e.g. opening a GUI, drinking a potion, activating a tool) but does **not** affect block placement. Locking `use` alone will not prevent a placeable block from being placed.
+Two smaller consequences travel with it. The result slot of a trade window is now judged by `trade` rather than by `pickup`, so an entry that allowed pickup in order to allow trading has to say `trade` instead. And the extra action costs room in the stage's network payload: a stage made entirely of narrowed item entries now holds about 544 of them rather than 581.
+:::
+
+:::tip
+**`place` vs `use`:** These two actions are distinct. `place` gates block placement — when locked, the item cannot be placed as a block. `use` gates right-click usage (e.g. opening a GUI, drinking a potion, activating a tool) but does **not** affect block placement. Locking `use` alone will not prevent a placeable block from being placed.
+:::
 
 The field lists the actions that are **not** locked — every other action remains blocked. A plain string entry (or an object without `unlock_actions`) keeps the default behaviour of locking every action.
 
@@ -117,6 +123,8 @@ The field lists the actions that are **not** locked — every other action remai
 
 In this example, the diamond pickaxe stays fully locked, while the diamond sword can still be picked up and equipped — only attacking, crafting, and other actions remain blocked. Iron ingots from the tag can be picked up but cannot be used, equipped, or crafted with.
 
-> **Note:** The legacy `lock_actions` field (which listed the locked actions directly) is still read for backwards compatibility, but new entries are always written using `unlock_actions`.
+:::note
+**Note:** The legacy `lock_actions` field (which listed the locked actions directly) is still read for backwards compatibility, but new entries are always written using `unlock_actions`.
+:::
 
-**Two surfaces deliberately ignore the action list.** An item whose entry narrows the lock to, say, `recipe` alone still shows as `???` in the inventory when the stage has [Hidden Display](/docs/modpack-developers/locking-zones/stage-behavior#hidden-display) on, and still carries the "requires stage X" tooltip. Both describe *that the item belongs to a stage*, which stays true however narrow the gate is. Everything that actually refuses an action — containers, equip slots, item frames, anvils, the recipe browser — reads the list.
+**Two surfaces deliberately ignore the action list.** An item whose entry narrows the lock to, say, `recipe` alone still shows as `???` in the inventory when the stage has [Hidden Display](/wiki/modpack-developers/locking-zones/stage-behavior#hidden-display) on, and still carries the "requires stage X" tooltip. Both describe *that the item belongs to a stage*, which stays true however narrow the gate is. Everything that actually refuses an action — containers, equip slots, item frames, anvils, the recipe browser — reads the list.

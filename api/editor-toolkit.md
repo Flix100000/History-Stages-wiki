@@ -3,8 +3,10 @@ title: Editor Toolkit
 sidebar_position: 7
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **The same toolkit serves all five extension points, and that is the whole reason an addon's tab looks like a built-in one — it is built from the same widgets.**
 
@@ -44,7 +46,9 @@ The last two arguments are the pair that makes the free tier work in both direct
 
 `t -> t instanceof RelicFoundTrigger r ? r.relic() : ""` is the **way back**: `Function<TriggerCondition, String>`, handed a condition that was loaded from disk and asked which id it was built from. Only the addon can read its own trigger, so without this the editor has nothing to print in the value column. The five-argument overload of `ofIdList` supplies `t -> ""` for it, and lists render that as the bare type — honest, but a trigger list where every row says the same thing.
 
-> **Note:** The type string passed first must name a trigger type that is actually registered, and the same holds for `CategoryEditor.ofIdList` and `RequirementEditor.ofIdList` / `ofIdCount`. Those two build their tab against the registered category or requirement and throw `IllegalStateException` from `createTab` when nothing is registered under the id — at the moment the tab is opened, naming the id.
+:::note
+**Note:** The type string passed first must name a trigger type that is actually registered, and the same holds for `CategoryEditor.ofIdList` and `RequirementEditor.ofIdList` / `ofIdCount`. Those two build their tab against the registered category or requirement and throw `IllegalStateException` from `createTab` when nothing is registered under the id — at the moment the tab is opened, naming the id.
+:::
 
 `RequirementEditor` has one extra wrinkle: both of its factories read and write `IdCountEntry`, so a requirement using either must have registered with `RequirementStorage.gson(IdCountEntry.class)`. `ofIdCount` adds an amount dialog on top of the picker; `ofIdList` stores the same entry shape with a count of 1, rather than a second shape differing by one field.
 

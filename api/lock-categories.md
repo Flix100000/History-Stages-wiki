@@ -3,8 +3,10 @@ title: Lock Categories
 sidebar_position: 2
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **A lock category answers the question "what can be gated?" — and the sixteen things History Stages ships with are themselves categories, registered through the same path an addon uses.**
 
@@ -29,15 +31,15 @@ Items, tags, mods, structures, biomes, dimensions and the three entity locks are
 | `historystages:biomes` | Biome ids and biome tags | Global + Individual |
 | `historystages:zones` | Named areas a pack author draws themselves, each with its own rules | Global + Individual² |
 
-¹ Individually only at the stations that know which player is standing at them — crafting table, the 2×2 inventory grid, stonecutter, smithing table. → [Global vs Individual Stages](/docs/general/global-vs-individual-stages) has the full list of what a per-player recipe gate does and does not reach.
+¹ Individually only at the stations that know which player is standing at them — crafting table, the 2×2 inventory grid, stonecutter, smithing table. → [Global vs Individual Stages](/wiki/general/global-vs-individual-stages) has the full list of what a per-player recipe gate does and does not reach.
 
-² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Zones](/docs/modpack-developers/locking-zones/zones).
+² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Zones](/wiki/modpack-developers/locking-zones/zones).
 
 Blocks have no category of their own — a block is gated through its item id in `historystages:items`.
 
 Neither the tab nor the JSON key is the unit — **the question is.** A category is one thing the lock engine can be asked, and the two containers around it group by whatever is convenient at that end.
 
-It comes apart in both directions. Attack, spawn and interaction are three categories sharing one `entities` object on disk *and* one tab, with a segment bar changing between the three sections; trades do the same with offers, professions and levels under `trades`. Both group coarser than the questions, because a packmaker gating a mob — or a merchant — thinks about one subject rather than three. Items go the other way: `items`, `tags` and `mods` are three categories, three keys and three tabs, and every one of them is a way of naming an item. Count the questions, not the tabs. → [Stage Configuration](/docs/modpack-developers/stage-basics/stage-configuration) covers what those built-in fields mean for a packmaker.
+It comes apart in both directions. Attack, spawn and interaction are three categories sharing one `entities` object on disk *and* one tab, with a segment bar changing between the three sections; trades do the same with offers, professions and levels under `trades`. Both group coarser than the questions, because a packmaker gating a mob — or a merchant — thinks about one subject rather than three. Items go the other way: `items`, `tags` and `mods` are three categories, three keys and three tabs, and every one of them is a way of naming an item. Count the questions, not the tabs. → [Stage Configuration](/wiki/modpack-developers/stage-basics/stage-configuration) covers what those built-in fields mean for a packmaker.
 
 A section whose category does not serve the stage you are editing is greyed on the bar rather than hidden, and says why on hover — spawn locks on an individual stage are the one built-in case. The tab itself only disappears when *none* of its sections fits, so the two entity categories that do work per player stay reachable.
 
@@ -159,7 +161,9 @@ They are counterparts — implementing one without the other gains nothing, beca
 
 Both are optional, and a category that stays silent is still **correct**, just scanned in full. It starts being worth implementing once a pack runs a few hundred stages: the scan is linear in stage count and costs roughly four microseconds at three hundred stages, against about fifty nanoseconds through the index.
 
-> **A category must over-estimate its keys, never under-estimate.** List every id that `gates` could possibly answer "yes" to on this stage, including the ones whose real answer depends on something else — an NBT criterion, a spawn source, a held item. The exact check still runs afterwards on the candidates, so a key too many costs one comparison. **A key too few means the stage is never asked, and the thing it should gate is silently unlocked.** That is the failure mode: no crash, no log line, no error in the debug output — a lock that simply is not there.
+:::warning
+**A category must over-estimate its keys, never under-estimate.** List every id that `gates` could possibly answer "yes" to on this stage, including the ones whose real answer depends on something else — an NBT criterion, a spawn source, a held item. The exact check still runs afterwards on the candidates, so a key too many costs one comparison. **A key too few means the stage is never asked, and the thing it should gate is silently unlocked.** That is the failure mode: no crash, no log line, no error in the debug output — a lock that simply is not there.
+:::
 
 The same warning has teeth for a category whose `gates` reads a neighbouring category on the same stage: the ids from that neighbour belong in `indexKeys` too, or the stage is never asked and the thing it should gate is quietly free. The built-in attack lock used to be the worked example — until 6.0.0 it also gated entities named by a source-less spawn lock, and had to index both lists. That implication is gone, and the attack lock now indexes only its own entries; the trap it illustrates has not gone anywhere.
 

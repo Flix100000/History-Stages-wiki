@@ -3,7 +3,7 @@ title: "Scripting: CraftTweaker"
 sidebar_position: 8
 ---
 
-The CraftTweaker side of the scripting bridge. → [Scripting Overview](/docs/modpack-developers/server-integration/scripting-with-kubejs-and-crafttweaker)
+The CraftTweaker side of the scripting bridge. → [Scripting Overview](/wiki/modpack-developers/server-integration/scripting-with-kubejs-and-crafttweaker)
 covers what a script can and cannot do, and the before/after-6.0.0 table. → [Scripting: KubeJS](./scripting-kubejs.md)
 is the JavaScript equivalent, with the same capabilities.
 

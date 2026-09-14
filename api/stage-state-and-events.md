@@ -3,8 +3,10 @@ title: Stage State & Events
 sidebar_position: 8
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **Reading stages, changing them, and reacting when they change — the part of the API a mod needs even if it registers no extension point at all.**
 
@@ -35,7 +37,9 @@ for (ServerPlayer target : targets) {
 }
 ```
 
-> **None of the four checks that the stage exists.** An id that is in no stage file is written into the save data anyway, the call returns `true`, and the display name falls back to the raw id. Every caller inside the mod guards first — `StageManager.getStages().containsKey(id)` for a global stage, `StageManager.getIndividualStages().get(id) != null` for an individual one — and returns early when the stage is unknown. Do the same, or a typo becomes a phantom unlock that nothing will ever report.
+:::warning
+**None of the four checks that the stage exists.** An id that is in no stage file is written into the save data anyway, the call returns `true`, and the display name falls back to the raw id. Every caller inside the mod guards first — `StageManager.getStages().containsKey(id)` for a global stage, `StageManager.getIndividualStages().get(id) != null` for an individual one — and returns early when the stage is unknown. Do the same, or a typo becomes a phantom unlock that nothing will ever report.
+:::
 
 ### What each call does besides flipping the flag
 
@@ -50,7 +54,7 @@ for (ServerPlayer target : targets) {
 | Reloads recipes | yes | — | yes | — |
 | Drops now-locked items from the inventory | — | — | — | yes |
 
-The recipe reload sits only on the two global methods because recipes are a global-only lock category — a reload per individual unlock would be work for nothing. → [Global vs Individual Stages](/docs/general/global-vs-individual-stages) for why that category cannot go per-player.
+The recipe reload sits only on the two global methods because recipes are a global-only lock category — a reload per individual unlock would be work for nothing. → [Global vs Individual Stages](/wiki/general/global-vs-individual-stages) for why that category cannot go per-player.
 
 Two things these methods deliberately leave alone, because they belong to whoever is driving the change: **auto-trigger progress** and **temporary-mode timers**. Relocking a stage does not reset the progress a player made towards it, and does not stop a running temporary timer. `/history stage lock` clears both itself, right after its relock; a `lose_on_death` relock expires the timer itself, and keeps the progress on purpose.
 
@@ -132,7 +136,9 @@ NeoForge.EVENT_BUS.addListener((StageEvent.Unlocked event) ->
 
 Every way a stage can change posts the matching event: the research pedestal, every `/history stage` and `/history individual` subcommand, the in-game editor, an auto-trigger firing, an FTB Quests reward, a temporary stage's timer running out, a `lose_on_death` relock, and any mod calling `StageStates` itself. **A listener therefore runs regardless of what caused the change, and never has to know what caused it.**
 
-> **One gap worth knowing about.** The creative research scroll's "unlock everything" path writes the state directly and fires no events at all. It is a testing item that never reaches a player in a normal pack, so a listener that reacts to progression is unaffected — but a listener that keeps a *mirror* of unlock state should not treat "I saw every event" as "my mirror is correct" on a creative world.
+:::warning
+**One gap worth knowing about.** The creative research scroll's "unlock everything" path writes the state directly and fires no events at all. It is a testing item that never reaches a player in a normal pack, so a listener that reacts to progression is unaffected — but a listener that keeps a *mirror* of unlock state should not treat "I saw every event" as "my mirror is correct" on a creative world.
+:::
 
 ## Asking whether something is gated
 

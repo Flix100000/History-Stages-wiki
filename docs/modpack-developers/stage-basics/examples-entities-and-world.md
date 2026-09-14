@@ -4,7 +4,7 @@ sidebar_position: 5
 ---
 
 Worked examples for spawn rules, fluids, trades, zones, biomes, and structure generation caps.
-→ [Basic Examples](./examples-basic.md) covers item/tag/mod locking. → [Stage Examples](/docs/modpack-developers/stage-basics/stage-examples)
+→ [Basic Examples](./examples-basic.md) covers item/tag/mod locking. → [Stage Examples](/wiki/modpack-developers/stage-basics/stage-examples)
 has the flagship combined example.
 
 ## Per-Source Spawn Locking

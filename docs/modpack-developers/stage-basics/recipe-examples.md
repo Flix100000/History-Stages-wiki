@@ -5,9 +5,13 @@ sidebar_position: 6
 
 This page collects ready-to-use crafting recipe examples for History Stages items — primarily **Research Scrolls** and the **Research Pedestal**. History Stages itself does not ship default recipes; modpack authors decide how players obtain these items.
 
-> **Stage IDs:** Every scroll recipe references a stage ID (e.g. `iron_age`). This must exactly match the ID defined in your `config/historystages/global/` or `individual/` JSON files. A typo here is the most common reason a custom recipe "doesn't work".
+:::warning
+**Stage IDs:** Every scroll recipe references a stage ID (e.g. `iron_age`). This must exactly match the ID defined in your `config/historystages/global/` or `individual/` JSON files. A typo here is the most common reason a custom recipe "doesn't work".
+:::
 
-> **Component vs. NBT syntax:** Starting with Minecraft 1.20.5, item data uses **data components** (`minecraft:custom_data`) instead of raw NBT. The examples below use the modern syntax. For 1.20.4 and older, replace `{"minecraft:custom_data":{...}}` with the old `{StageResearch:"..."}` NBT form.
+:::info
+**Component vs. NBT syntax:** Starting with Minecraft 1.20.5, item data uses **data components** (`minecraft:custom_data`) instead of raw NBT. The examples below use the modern syntax. For 1.20.4 and older, replace `{"minecraft:custom_data":{...}}` with the old `{StageResearch:"..."}` NBT form.
+:::
 
 ---
 
@@ -89,12 +93,15 @@ craftingTable.addShaped("historystages_research_scroll_iron_age",
 );
 ```
 
-> **MC 1.20.5+ / 1.21:** Replace `.withTag({...})` with the component-based form:
-> ```zenscript
-> <item:historystages:research_scroll>.withJsonComponents({
->     "minecraft:custom_data": {StageResearch: "iron_age"} as IData
-> })
-> ```
+:::info
+**MC 1.20.5+ / 1.21:** Replace `.withTag({...})` with the component-based form:
+
+```zenscript
+<item:historystages:research_scroll>.withJsonComponents({
+    "minecraft:custom_data": {StageResearch: "iron_age"} as IData
+})
+```
+:::
 
 Replace `iron_age` with your stage ID — works for global and individual stages.
 

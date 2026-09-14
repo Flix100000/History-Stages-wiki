@@ -3,8 +3,10 @@ title: Requirements
 sidebar_position: 3
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **A requirement answers the question "what must be done before this stage opens?".** Nine kinds ship with the mod, and an addon registers its own the same way.
 
@@ -20,7 +22,7 @@ sidebar_position: 3
 | `stat` | A tracked Minecraft statistic has reached a value. | Individual |
 | `scoreboard` | A scoreboard objective satisfies a numeric comparison. | Global, Individual |
 
-Requirements sit inside dependency groups on a stage — every entry in a group has to be met before the group counts as satisfied. → [Stage Behavior](/docs/modpack-developers/locking-zones/stage-behavior#stage-dependencies) covers the packmaker-facing side of that. Note that a requirement ID is a registry key, not a JSON field name: the built-ins keep their entries in typed fields whose names do not always match (`entity_kill` writes into `entity_kills`, `item_tag` into `item_tags`, `individual_stage` into `individual_stages`). Addon requirements have no such split — their ID is also the key they store under.
+Requirements sit inside dependency groups on a stage — every entry in a group has to be met before the group counts as satisfied. → [Stage Behavior](/wiki/modpack-developers/locking-zones/stage-behavior#stage-dependencies) covers the packmaker-facing side of that. Note that a requirement ID is a registry key, not a JSON field name: the built-ins keep their entries in typed fields whose names do not always match (`entity_kill` writes into `entity_kills`, `item_tag` into `item_tags`, `individual_stage` into `individual_stages`). Addon requirements have no such split — their ID is also the key they store under.
 
 An addon requirement is stored, checked, and displayed exactly like a built-in. The one structural difference is where the entries live: a built-in is a view over a typed field on the dependency group, while an addon requirement has no such field and stores through the group's raw `addons` block instead — a map of requirement ID to raw JSON.
 
@@ -66,7 +68,9 @@ event.register(AddonRequirement.<IdCountEntry>builder(REQUIREMENT_ID)
 
 The ID must be namespaced (`mymod:relic`), and `historystages` is reserved for the built-ins. `build()` throws on a missing required field or a malformed ID, so a misconfigured requirement fails at startup rather than silently doing nothing. Registration also rejects an ID that is already taken, whether by a built-in or by another addon.
 
-> **Note:** Registering here is enough to *store* a requirement and to *gate* on it. It is not enough to *edit* it — a tab in the dependency editor is a separate, client-side registration, because History Stages cannot guess what a relic is nor which ones exist.
+:::note
+**Note:** Registering here is enough to *store* a requirement and to *gate* on it. It is not enough to *edit* it — a tab in the dependency editor is a separate, client-side registration, because History Stages cannot guess what a relic is nor which ones exist.
+:::
 
 ## Writing the evaluator
 

@@ -4,7 +4,7 @@ sidebar_position: 2
 ---
 
 The three locking mechanisms that gate part of the world itself rather than an item or a creature: fluids,
-biomes, and how often a structure may generate. → [Lock Types](/docs/modpack-developers/locking-zones/lock-types) covers item and tag
+biomes, and how often a structure may generate. → [Lock Types](/wiki/modpack-developers/locking-zones/lock-types) covers item and tag
 locking; → [Entity & Trade Locks](./entity-and-trade-locks.md) covers mobs and merchants.
 
 ## Fluid Locking
@@ -31,7 +31,9 @@ The action vocabulary is shorter than the item one. A fluid can answer for seven
 
 `equip`, `attack`, `break` and `gui` are not offered, because a fluid is not worn, not swung, not mined and opens no GUI of its own. In exchange there is `ingredient`, which items do not have.
 
-> **`recipe` and `ingredient` are two different things, and both are on by default.** `recipe` gates the recipes that **produce** the fluid; `ingredient` gates the ones that **consume** it. An entry without `unlock_actions` locks every one of the seven, so gating `minecraft:water` takes every recipe that touches water out of the pack — in a large modpack that is a four-digit number of recipes. This is the single most common surprise with fluid locks. Narrow the entry with `unlock_actions` if that is not what you meant.
+:::warning
+**`recipe` and `ingredient` are two different things, and both are on by default.** `recipe` gates the recipes that **produce** the fluid; `ingredient` gates the ones that **consume** it. An entry without `unlock_actions` locks every one of the seven, so gating `minecraft:water` takes every recipe that touches water out of the pack — in a large modpack that is a four-digit number of recipes. This is the single most common surprise with fluid locks. Narrow the entry with `unlock_actions` if that is not what you meant.
+:::
 
 That also answers a question that otherwise reads as a bug: **recipes disappear that nobody listed.** Gating a fluid removes the recipes touching it from crafting and from the recipe browser, including recipes inside other mods' machines. The `[Recipes: N]` badge the editor shows on a fluid row is there so the reach of an entry is visible before the decision rather than after it. The index behind that number is only built when a fluid is actually gated or the editor is open, so a row with no badge means either "none" or "not counted yet" — open the fluid tab once and it settles.
 

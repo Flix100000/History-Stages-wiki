@@ -3,8 +3,10 @@ title: Stage Settings
 sidebar_position: 5
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 A settings group attaches your own settings to **every stage** — not to the mod, to the individual stage.
 
@@ -83,7 +85,9 @@ The demo builds the group in a method of its own rather than inline in that hand
 
 Registration is legal only while the event is being dispatched. When dispatch ends the registry freezes, so everything that walks it — the settings screen's card layout, the lang parity check, sync — may assume the list never changes afterwards. An always-open registry would let a server and a client disagree about which groups exist.
 
-> **Note:** The group id has to be namespaced with your own mod id (`yourmodid:trades`). `build()` rejects an id without a namespace, an id in the reserved `historystages` namespace, a group without a `titleLangKey`, and a group with no fields. Two fields sharing a key in one group throw as well.
+:::note
+**Note:** The group id has to be namespaced with your own mod id (`yourmodid:trades`). `build()` rejects an id without a namespace, an id in the reserved `historystages` namespace, a group without a `titleLangKey`, and a group with no fields. Two fields sharing a key in one group throw as well.
+:::
 
 ## Scopes
 

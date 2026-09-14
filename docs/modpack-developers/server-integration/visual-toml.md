@@ -4,7 +4,7 @@ sidebar_position: 3
 ---
 
 What a player sees or hears. Lives at `config/historystages/settings/visual.toml`, server-owned and
-synced to every player who joins — see [Configuration](/docs/modpack-developers/server-integration/configuration) for how the settings files
+synced to every player who joins — see [Configuration](/wiki/modpack-developers/server-integration/configuration) for how the settings files
 are organized as a whole. → [gameplay.toml](./gameplay-toml.md) covers what happens in the background.
 
 ## `[visuals]`

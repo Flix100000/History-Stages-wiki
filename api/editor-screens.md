@@ -105,7 +105,9 @@ These are `default`, and a simple tab overrides none of them:
 
 Six input methods and not one, because drawing without input is a picture: an embedded number field would take its `+` / `−` clicks through `mouseClicked` and never see a typed digit, and a slider needs `mouseDragged` and `mouseReleased` besides.
 
-> **Note:** `iconItemId` and `badgeText` are honoured by **both** editors. This used to be true of the dependency editor only; the stage editor now asks the tab as well. Its own built-in decorations still come first and a tab's answers are applied after them, so a lock-category tab that returns an icon or a badge is drawn, and badges stack rather than overwrite one another. A self-drawing tab is unaffected either way — it paints its own icon through `EditorRowList`'s `leading` slot and its own badges through `badge`.
+:::note
+**Note:** `iconItemId` and `badgeText` are honoured by **both** editors. This used to be true of the dependency editor only; the stage editor now asks the tab as well. Its own built-in decorations still come first and a tab's answers are applied after them, so a lock-category tab that returns an icon or a badge is drawn, and badges stack rather than overwrite one another. A self-drawing tab is unaffected either way — it paints its own icon through `EditorRowList`'s `leading` slot and its own badges through `badge`.
+:::
 
 The rest of the interface is **not** `default`, and every tab supplies it — usually by extending `AbstractCategoryTab` or `AbstractDependencyTab` rather than by hand:
 

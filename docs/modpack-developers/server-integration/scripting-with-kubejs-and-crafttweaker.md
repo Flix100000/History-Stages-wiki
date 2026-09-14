@@ -107,4 +107,4 @@ Then the id is yours, it never moves, and picking it in the editor sticks.
 
 **See also:** [Stage State & Events](/api/stage-state-and-events) for the Java side of the same events ·
 [Lock Categories](/api/lock-categories) for what the category ids mean ·
-[Mod Compatibility](/docs/modpack-developers/server-integration/mod-compatibility) for the other integrations
+[Mod Compatibility](/wiki/modpack-developers/server-integration/mod-compatibility) for the other integrations

@@ -4,7 +4,7 @@ sidebar_position: 4
 ---
 
 What happens in the background. Lives at `config/historystages/settings/gameplay.toml`, server-owned and
-synced to every player who joins — see [Configuration](/docs/modpack-developers/server-integration/configuration) for how the settings files
+synced to every player who joins — see [Configuration](/wiki/modpack-developers/server-integration/configuration) for how the settings files
 are organized as a whole. → [visual.toml](./visual-toml.md) covers what a player sees or hears.
 
 ## `[logging]`

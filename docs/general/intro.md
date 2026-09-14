@@ -5,7 +5,9 @@ sidebar_position: 1
 
 **History Stages** is a progression and gatekeeping mod for Minecraft on Forge, NeoForge, and Fabric. It provides a framework for modpack creators to implement custom progression systems by locking game content behind research stages.
 
-> **Note:** This wiki is always aligned with the latest version of the mod. Please be aware that the 1.19.X versions will not receive any further updates for the time being.
+:::note
+**Note:** This wiki is always aligned with the latest version of the mod. Please be aware that the 1.19.X versions will not receive any further updates for the time being.
+:::
 
 ## Core Mechanics
 
@@ -41,9 +43,9 @@ History Stages allows for the restriction of various game elements until specifi
 Modpack creators can define stages and manage configurations through two methods:
 
 1.  **In-Game Editor:** A graphical interface accessible via the pause menu (requires OP permissions) for creating and modifying stages without editing files directly.
-2.  **JSON Configuration:** Manual editing of `.json` files located in the `config/historystages/global/` and `config/historystages/individual/` directories. Files can be organized into nested folders for large modpacks — see [Folders](/docs/modpack-developers/locking-zones/stage-behavior#folders).
+2.  **JSON Configuration:** Manual editing of `.json` files located in the `config/historystages/global/` and `config/historystages/individual/` directories. Files can be organized into nested folders for large modpacks — see [Folders](/wiki/modpack-developers/locking-zones/stage-behavior#folders).
 
-Large modpacks can also expose an interactive **[Stage Graph](/docs/modpack-developers/in-game-tools/stage-graph)** to players from the pause menu, visualizing the whole progression tree.
+Large modpacks can also expose an interactive **[Stage Graph](/wiki/modpack-developers/in-game-tools/stage-graph)** to players from the pause menu, visualizing the whole progression tree.
 
 ## Community & Support
 

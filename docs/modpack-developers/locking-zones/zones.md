@@ -3,7 +3,9 @@ title: Zones
 sidebar_position: 4
 ---
 
-> **Beta.** Zones work and are enforced, but the category is younger than the rest and still growing. Expect additions.
+:::warning
+**Beta.** Zones work and are enforced, but the category is younger than the rest and still growing. Expect additions.
+:::
 
 A zone is an area the pack author draws themselves — a crater, a walled-off city, the far side of a river — rather than something Minecraft already has a name for. Unlike biome and structure locks, whose behaviour is set once for the whole server in the config, **every zone carries its own rules**: one can merely refuse interaction while the next one burns.
 
@@ -41,7 +43,7 @@ A zone is an area the pack author draws themselves — a crater, a walled-off ci
 }
 ```
 
-Zones are normally drawn in the game rather than typed. Sneak + left click with the marker item sets the first corner and sneak + right click the second (see [`[zone_lock]`](/docs/modpack-developers/server-integration/gameplay-toml#zone_lock)); `/history zone mark`, `clear` and `info` do the same without an item, which is how you set a corner you cannot stand on.
+Zones are normally drawn in the game rather than typed. Sneak + left click with the marker item sets the first corner and sneak + right click the second (see [`[zone_lock]`](/wiki/modpack-developers/server-integration/gameplay-toml#zone_lock)); `/history zone mark`, `clear` and `info` do the same without an item, which is how you set a corner you cannot stand on.
 
 **The dimension is mandatory and is never inverted.** Coordinates alone are ambiguous — 100/64/100 exists in the Overworld, the Nether and the End — so a zone meant for a Nether fortress would otherwise also fire in the middle of an Overworld village. An area spanning two worlds is two zones, on purpose: the editor then shows that there are two.
 

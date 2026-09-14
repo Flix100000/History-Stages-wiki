@@ -5,7 +5,7 @@ sidebar_position: 4
 
 Worked examples of the basic item/tag/mod locking fields, from a first stage to NBT-specific and
 per-entry action locking. → [Entity & World Examples](./examples-entities-and-world.md) covers spawn
-rules, fluids, zones, biomes, and structures. → [Stage Examples](/docs/modpack-developers/stage-basics/stage-examples) has the flagship
+rules, fluids, zones, biomes, and structures. → [Stage Examples](/wiki/modpack-developers/stage-basics/stage-examples) has the flagship
 combined example.
 
 ## Basic Item and Recipe Locking

@@ -16,7 +16,9 @@ config/historystages/settings/
 
 Saving from the in-game editor requires permission level 2.
 
-> **Stage Graph:** `graph.toml` has around 90 keys of its own (canvas appearance, visibility rules, node styling). It is documented on the **[Stage Graph](../in-game-tools/stage-graph.md)** page and has its own tab in the config editor.
+:::info
+**Stage Graph:** `graph.toml` has around 90 keys of its own (canvas appearance, visibility rules, node styling). It is documented on the **[Stage Graph](../in-game-tools/stage-graph.md)** page and has its own tab in the config editor.
+:::
 
 The two files, in full:
 

@@ -4,7 +4,7 @@ sidebar_position: 3
 ---
 
 The two locking mechanisms that gate a living, moving part of the world rather than an item or a place:
-mob interactions, and what a merchant will trade. → [Lock Types](/docs/modpack-developers/locking-zones/lock-types) covers item and tag
+mob interactions, and what a merchant will trade. → [Lock Types](/wiki/modpack-developers/locking-zones/lock-types) covers item and tag
 locking; → [World Locks](./world-locks.md) covers fluids, biomes, and structure generation.
 
 ## Entity Control

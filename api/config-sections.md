@@ -3,8 +3,10 @@ title: Config Sections
 sidebar_position: 6
 ---
 
-> **API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
-> The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::info
+**API generation 6** · Requires History Stages **6.0.0+** on **NeoForge 1.21**.
+The addon platform does not exist on Fabric or Forge 1.20 yet.
+:::
 
 **A config section gives an addon its own rows in the History Stages config screen.**
 
@@ -137,7 +139,9 @@ modEventBus.addListener(RegisterCustomFieldScreensEvent.class, event -> event.re
 
 The declaration and the screen are kept apart on purpose: a declaration is common-side, because the server may read and sync the value, while a screen is pure client UI that server code must never reach. Registration is keyed by the field object itself, so hold your field in a `static final` constant and register against that same constant — there is no key string to mistype. A field with no screen registered still shows its row and still syncs; it just cannot be edited there.
 
-> **Note:** In 6.0.0 as it stands, `AddonConfigField` has factory methods for the other eleven kinds but none for `CUSTOM_SCREEN`, and its `Builder` constructor is private — so a `CUSTOM_SCREEN` **config field** cannot be declared through the public API yet, even though the editor already renders and routes one. The equivalent on the stage-settings axis, `Setting.customScreen(key)`, does exist. → [Stage Settings](./stage-settings.md).
+:::note
+**Note:** In 6.0.0 as it stands, `AddonConfigField` has factory methods for the other eleven kinds but none for `CUSTOM_SCREEN`, and its `Builder` constructor is private — so a `CUSTOM_SCREEN` **config field** cannot be declared through the public API yet, even though the editor already renders and routes one. The equivalent on the stage-settings axis, `Setting.customScreen(key)`, does exist. → [Stage Settings](./stage-settings.md).
+:::
 
 ### What the demo covers
 

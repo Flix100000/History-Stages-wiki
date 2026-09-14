@@ -43,17 +43,6 @@ Modpack creators can define stages and manage configurations through two methods
 
 Questions, support, or feedback? Join our [Discord server](https://discord.gg/BeZzxyZ9c4).
 
-## License & Authors
+## Authors
 
-**License:** All Rights Reserved — the source is public, but the mod is not open source.
-
-Quick rules:
-
-*   Use in modpacks (public, private, commercial): **allowed**
-*   Use in Let's Plays, streams, servers: **allowed**
-*   Fork to prepare a PR: **allowed**
-*   Publish forks / modified versions / re-uploads: **not allowed**
-
-Full terms: [LICENSE.txt](https://github.com/Flix100000/History-Stages/blob/neoforge-1.21.X/LICENSE.txt).
-
-**Authors:** Flix100000, PixlStudios
+Flix100000, PixlStudios

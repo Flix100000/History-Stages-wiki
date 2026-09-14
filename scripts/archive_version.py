@@ -34,6 +34,11 @@ STALE_NOTE_RE = re.compile(
     re.MULTILINE,
 )
 
+# Licence terms do not belong in an archive: the oldest stands still name GPLv3, which stopped being
+# true in July. LICENSE.txt is the one place that says what holds. The authors stay.
+LICENSE_SECTION_RE = re.compile(r"\n##\s+License & Authors\s*\n.*?(?=\n##\s|\Z)", re.DOTALL)
+AUTHORS_RE = re.compile(r"^\s*(?:\*\s+)?\*\*Authors:\*\*\s*(.+?)\s*$", re.MULTILINE)
+
 SIDEBAR_CATEGORY_RE = re.compile(r"^##\s+(.+?)\s*$")
 SIDEBAR_ITEM_RE = re.compile(r"^\s*\*\s+\[([^\]]+)\]\(([^)]+)\)\s*$")
 LINK_RE = re.compile(r"\[([^\]]+)\]\(([A-Za-z0-9_.-]+)(#[^)\s]*)?\)")
@@ -90,6 +95,15 @@ def rewrite_links(body, known, dropped):
     return LINK_RE.sub(replace, body)
 
 
+def drop_license_section(body):
+    match = LICENSE_SECTION_RE.search(body)
+    if not match:
+        return body
+    names = AUTHORS_RE.search(match.group(0))
+    keep = f"\n## Authors\n\n{names.group(1)}\n" if names else "\n"
+    return body[:match.start()] + keep + body[match.end():]
+
+
 def frontmatter(page, sidebar_label, title):
     lines = ["---", f"id: {slug_of(page)}", f"title: {title}"]
     if sidebar_label != title:
@@ -132,6 +146,7 @@ def archive(ref, label, dropped):
             body = H1_RE.sub("", body, count=1)
             if page == "Home":
                 body = STALE_NOTE_RE.sub("", body, count=1)
+                body = drop_license_section(body)
             body = rewrite_links(body, keep, dropped)
             target = os.path.join(out_dir, f"{slug_of(page)}.md")
             with open(target, "w", encoding="utf-8", newline="\n") as f:

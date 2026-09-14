@@ -39,7 +39,6 @@ Modpack creators can define stages and manage configurations through two methods
 1.  **In-Game Editor:** A graphical interface accessible via the pause menu (requires OP permissions) for creating and modifying stages without editing files directly.
 2.  **JSON Configuration:** Manual editing of `.json` files located in the `config/historystages/global/` and `config/historystages/individual/` directories.
 
-## License & Authors
+## Authors
 
-*   **License:** GNU General Public License version 3 (GPLv3)
-*   **Authors:** Flix100000, PixlStudios
+Flix100000, PixlStudios

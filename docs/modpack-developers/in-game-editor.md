@@ -106,7 +106,7 @@ That screen has four sections. **General** holds the name, the world, and the li
 
 There are two ways in, and they meet in the same place:
 
-*   **Mark it in the world.** Sneak + left click with the marker item sets the first corner, sneak + right click the second (the item is named in [`[zone_lock]`](Configuration#zone_lock)); `/history zone mark` does the same without an item. Back in the editor, **Marked in the world** shows the selection and **Use it** turns it into a cube.
+*   **Mark it in the world.** Sneak + left click with the marker item sets the first corner, sneak + right click the second (the item is named in [`[zone_lock]`](./configuration.md#zone_lock)); `/history zone mark` does the same without an item. Back in the editor, **Marked in the world** shows the selection and **Use it** turns it into a cube.
 *   **Type it.** **Add shape** offers a cube, a sphere or a cylinder, and **Numbers** opens the coordinates for editing by hand — which is how you set a corner in a place you would rather not stand.
 
 A zone is the union of its shapes, so an awkward area is built by dropping several over each other rather than by finding one box that fits.

@@ -193,7 +193,7 @@ The `biomes` block restricts players from surviving in specific biomes until the
 }
 ```
 
-While a player stands inside a locked biome, the mod can apply potion effects, deal periodic damage, show a periodic warning message, and cancel right-clicks, left-clicks/mining, and projectile impacts — all configurable per-server in `historystages/settings/gameplay.toml` under `biome_lock` (see [Configuration](./configuration.md#biome-locking-biome_lock)). This mirrors the existing structure-lock behaviour, applied to biomes instead of structure zones.
+While a player stands inside a locked biome, the mod can apply potion effects, deal periodic damage, show a periodic warning message, and cancel right-clicks, left-clicks/mining, and projectile impacts — all configurable per-server in `historystages/settings/gameplay.toml` under `biome_lock` (see [Configuration](./configuration.md#biome_lock)). This mirrors the existing structure-lock behaviour, applied to biomes instead of structure zones.
 
 ### Structure Generation Limits
 
@@ -264,7 +264,7 @@ A zone is an area the pack author draws themselves — a crater, a walled-off ci
 }
 ```
 
-Zones are normally drawn in the game rather than typed. Sneak + left click with the marker item sets the first corner and sneak + right click the second (see [`[zone_lock]`](Configuration#zone_lock)); `/history zone mark`, `clear` and `info` do the same without an item, which is how you set a corner you cannot stand on.
+Zones are normally drawn in the game rather than typed. Sneak + left click with the marker item sets the first corner and sneak + right click the second (see [`[zone_lock]`](./configuration.md#zone_lock)); `/history zone mark`, `clear` and `info` do the same without an item, which is how you set a corner you cannot stand on.
 
 **The dimension is mandatory and is never inverted.** Coordinates alone are ambiguous — 100/64/100 exists in the Overworld, the Nether and the End — so a zone meant for a Nether fortress would otherwise also fire in the middle of an Overworld village. An area spanning two worlds is two zones, on purpose: the editor then shows that there are two.
 
@@ -547,7 +547,7 @@ Stage JSON files can be organized into nested subfolders under `config/historyst
 
 Folder and file names may contain letters, digits, `-`, and `_`, but cannot start with `_` (an underscore prefix opts a file or folder out of loading — see below) and cannot use `..`, backslashes, or drive letters. Folders can be nested up to 8 levels deep.
 
-The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](./in-game-editor.md#organize-mode).
+The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](./in-game-editor.md#key-capabilities).
 
 ### Ignored Files
 

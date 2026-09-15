@@ -33,7 +33,7 @@ export default function HomepageHero() {
           <img src={iconUrl} alt="" width="96" height="96" className={styles.heroIcon} />
         </div>
         <Heading as="h1" className={styles.heroTitle}>
-          {siteConfig.title}
+          History Stages
         </Heading>
         <p className={styles.heroSubtitle}>{siteConfig.tagline}</p>
         <div className={styles.buttons}>

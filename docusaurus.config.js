@@ -10,7 +10,10 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'History Stages',
+  // The site's name, which is what a page title and a link preview show. The navbar keeps
+  // the mod's own name below, and so does the hero -- "Wiki" belongs in the title bar, not
+  // on the brand.
+  title: 'History Stages Wiki',
   tagline: 'Documentation for the History Stages modpack framework',
   favicon: 'img/icon.png',
 

@@ -1,6 +1,7 @@
 ---
 title: Lock Categories
-sidebar_position: 2
+description: "Registering a new kind of gated thing, the way the sixteen built-in categories are registered themselves."
+sidebar_position: 4
 ---
 
 :::info

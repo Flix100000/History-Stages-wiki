@@ -1,6 +1,7 @@
 ---
 title: Editor Screens
-sidebar_position: 9
+description: "The lifecycle hooks a custom tab may override, and the one that is easy to forget."
+sidebar_position: 11
 ---
 
 The full lifecycle contract a tab may override, the gotcha in the one hook that is easy to forget, and the

@@ -1,5 +1,6 @@
 ---
 title: Scripting
+description: "What a script may read and change, and the hard line between scripting stage state and defining stages."
 sidebar_position: 5
 ---
 

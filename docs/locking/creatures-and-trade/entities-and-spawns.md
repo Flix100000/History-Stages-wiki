@@ -1,5 +1,6 @@
 ---
 title: Entities & Spawns
+description: "Stopping attacks, stopping non-combat interaction, and writing spawn rules with conditions of place, time and weather."
 sidebar_position: 1
 ---
 

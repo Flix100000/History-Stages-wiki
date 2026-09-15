@@ -1,5 +1,6 @@
 ---
 title: Recipes
+description: "Gating named recipe ids, what happens in JEI and EMI, and why an individual stage cannot reach a furnace."
 sidebar_position: 4
 ---
 

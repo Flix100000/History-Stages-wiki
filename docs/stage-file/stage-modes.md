@@ -1,5 +1,6 @@
 ---
 title: Stage Modes
+description: "The four ways a stage can open — research at a pedestal, an automatic trigger, an external command, or a timed unlock that relocks itself."
 sidebar_position: 2
 ---
 

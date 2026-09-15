@@ -95,7 +95,7 @@ Research Scrolls are key items for unlocking stages. Different types of scrolls 
 
 ## Configuring the Scroll Tooltip
 
-The tooltip shown on a Research Scroll is fully configurable via `historystages-common.toml` under `scroll_tooltip.lines` (also editable in-game through a dedicated screen in the [Config Editor](./in-game-editor.md#config-editor)). Each entry is a pipe-delimited string: `id|enabled|spacerBefore|style|text`.
+The tooltip shown on a Research Scroll is fully configurable via `historystages-common.toml` under `scroll_tooltip.lines` (also editable in-game through a dedicated screen in the [Config Editor](./in-game-editor.md)). Each entry is a pipe-delimited string: `id|enabled|spacerBefore|style|text`.
 
 *   `id` — which section this line controls. The item name (`name`) is always shown first and cannot be reordered. The movable sections are, in configurable order: `individual_badge`, `owner`, `info1`, `info2`, `tier`, `dependencies`. The dependency block itself is built from further sub-templates (`dep.header`, `dep.item`, `dep.stage`, `dep.individual`, `dep.xp`, `dep.separator`) and icon/color options (`dep.icon_fulfilled`, `dep.icon_open`, `dep.icon_unknown`, `dep.color_fulfilled`, `dep.color_open`).
 *   `enabled` — whether the section is shown at all.

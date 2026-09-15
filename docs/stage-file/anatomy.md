@@ -1,5 +1,6 @@
 ---
 title: Anatomy of a Stage File
+description: "Every field a stage file can hold, what the editor writes into it, and what happens when one is left out."
 sidebar_position: 1
 ---
 

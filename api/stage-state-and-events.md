@@ -1,6 +1,7 @@
 ---
 title: Stage State & Events
-sidebar_position: 8
+description: "Reading which stages a player has unlocked, changing them, and reacting when they change — the part of the API any mod can call."
+sidebar_position: 2
 ---
 
 :::info

@@ -1,5 +1,6 @@
 ---
 title: Merchant Trades
+description: "Gating a single villager offer, a whole profession, or a merchant level, and what a player sees in the trade screen."
 sidebar_position: 2
 ---
 

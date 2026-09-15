@@ -1,6 +1,7 @@
 ---
 title: Upgrading from 5.x
-sidebar_position: 2
+description: "What changed for existing packs in 6.0.0, including the settings files moving and the two behaviour changes."
+sidebar_position: 5
 ---
 
 # Upgrading from 5.x
@@ -78,6 +79,37 @@ one, and nothing will tell you it does not match.
 
 `HistoryStagesEvents` cannot go wrong that way, and reading and changing stage state is possible
 from a script for the first time. → [Scripting](/wiki/server/scripting)
+
+## Four commands are gone
+
+`/history global info`, `/history global list`, `/history individual info` and
+`/history individual list` were removed. They printed a text dump of a stage definition that the
+editor shows better. A script or a quest reward still calling one hits a syntax error.
+
+The two temporary-stage `info` commands stay — they show runtime state nothing else can. →
+[Commands](/wiki/server/commands)
+
+## What 6.0 added
+
+Not a changelog — that lives with the
+[release](https://github.com/Flix100000/History-Stages/releases). This is the short list of things
+that did not exist in 5.x, so you know what is now worth reading:
+
+| | |
+| :--- | :--- |
+| [Fluids](/wiki/locking/items-and-recipes/fluids) | Gate the fluid, not the bucket. |
+| [Merchant Trades](/wiki/locking/creatures-and-trade/merchant-trades) | Single offers, professions and merchant levels. |
+| [Zones](/wiki/locking/world/zones) | Areas drawn out of shapes, with a barrier and an overlay. **Beta.** |
+| [Spawn rules](/wiki/locking/creatures-and-trade/entities-and-spawns) | A spawn entry carries a phase, eight conditions and extra biomes. |
+| [Scripting](/wiki/server/scripting) | KubeJS and CraftTweaker can read and change stage state. |
+| [Addon API](/api/) | Other mods can register their own locks, requirements and editor tabs. |
+| [Recipes](/wiki/locking/items-and-recipes/recipes) | Per-player recipe locks at the stations that know who is standing there. |
+| [Dependencies](/wiki/stage-file/dependencies) | Item-tag deposits, and requirements on the researcher's own individual stages. |
+| [Stage Modes](/wiki/stage-file/stage-modes#auto) | Triggers that unlock a stage from player and world state. |
+
+One thing to expect in an old world: stages unlocked before 6.0.0 have no recorded unlock time, and
+the Stage Graph background uses that timestamp. Until something unlocks again, the deepest stage in
+the tree decides the background once. → [Stage Graph](/wiki/in-game-tools/stage-graph)
 
 ## Things that did not change
 

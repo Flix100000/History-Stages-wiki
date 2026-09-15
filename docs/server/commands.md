@@ -1,5 +1,6 @@
 ---
 title: Commands & Permissions
+description: "Every /history command, what it takes, and which permission level it needs."
 sidebar_position: 1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "A progression framework for modpacks: define stages, list what each one holds back, and let players research their way forward."
 slug: /
 sidebar_position: 1
 ---

@@ -1,5 +1,6 @@
 ---
 title: Obtaining Scrolls & Pedestals
+description: "History Stages ships no recipes for scrolls or pedestals — ready-made routes for KubeJS, CraftTweaker and a plain datapack."
 sidebar_position: 3
 ---
 
@@ -188,13 +189,13 @@ have players find them than craft them. → [Mod Compatibility](/wiki/server/mod
 
 ## Admin Command (for testing)
 
-```
+```text
 /give @s historystages:research_scroll[minecraft:custom_data={StageResearch:"iron_age"}]
 ```
 
 For Minecraft 1.20.4 and older:
 
-```
+```text
 /give @s historystages:research_scroll{StageResearch:"iron_age"}
 ```
 

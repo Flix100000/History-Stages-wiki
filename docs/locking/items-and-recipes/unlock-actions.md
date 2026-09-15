@@ -1,5 +1,6 @@
 ---
 title: Unlock Actions
+description: "Narrowing a lock to single interactions, so a locked item can still be carried, crafted or traded while the rest stays gated."
 sidebar_position: 3
 ---
 

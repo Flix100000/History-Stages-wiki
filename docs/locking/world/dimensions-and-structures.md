@@ -1,5 +1,6 @@
 ---
 title: Dimensions & Structures
+description: "Refusing entry to a dimension, walling off a structure, and capping how often a structure may generate."
 sidebar_position: 1
 ---
 
@@ -83,7 +84,7 @@ shaped:
 
 Those two are hard to picture from numbers, so there are commands that draw the result:
 
-```
+```text
 /history debug structure
 /history debug viz
 /history debug shapes

@@ -1,5 +1,6 @@
 ---
 title: Stage Graph
+description: "The player-facing progression map — nodes, edges, and how much of the tree you let people see."
 sidebar_position: 2
 ---
 

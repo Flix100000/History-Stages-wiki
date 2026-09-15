@@ -1,5 +1,6 @@
 ---
 title: Complete Examples
+description: "Whole stage files ready to copy, each one naming the folder it belongs in."
 sidebar_position: 5
 ---
 

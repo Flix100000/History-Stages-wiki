@@ -1,5 +1,6 @@
 ---
 title: Credits
+description: "Who builds History Stages, and where everyone who helped is named."
 sidebar_position: 4
 ---
 

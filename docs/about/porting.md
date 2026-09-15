@@ -1,5 +1,6 @@
 ---
 title: Porting & Permissions
+description: "History Stages is All Rights Reserved with one carve-out: porting it to another version or loader, and the conditions attached."
 sidebar_position: 3
 ---
 

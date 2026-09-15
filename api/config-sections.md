@@ -1,6 +1,7 @@
 ---
 title: Config Sections
-sidebar_position: 6
+description: "Your own rows in the History Stages config screen, with the values staying in your own config."
+sidebar_position: 8
 ---
 
 :::info

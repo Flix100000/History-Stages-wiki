@@ -1,5 +1,6 @@
 ---
 title: Research Pedestal
+description: "Where progression actually happens: research time, the four pedestal tiers, boosters and what interrupts a run."
 sidebar_position: 1
 ---
 
@@ -14,6 +15,30 @@ The pedestal is where progression actually happens. A player puts a
 While research is running the pedestal emits light (level 13) and shows progress in its GUI.
 **Progress is stored in the scroll itself**, not in the block, so a player can take the scroll out,
 walk away, and carry on later — or finish at a different pedestal entirely.
+
+```mermaid
+flowchart TD
+    A["Scroll goes in the slot"] --> B{"Stage in default mode?"}
+    B -- "no: auto, external or temporary" --> X["Not researchable here"]
+    B -- yes --> C{"Pedestal tier<br/>allowed for this stage?"}
+    C -- no --> Y["Tier warning, Start stays dead"]
+    C -- yes --> D{"Dependencies met?"}
+    D -- no --> Z["Side panel lists what is missing.<br/>Deposit it into the pedestal."]
+    Z --> D
+    D -- yes --> E["Press Start"]
+    E --> F["Research runs for research_time,<br/>progress saved into the scroll"]
+    F --> G["Stage unlocks"]
+```
+
+## Starting and pausing
+
+Research does not begin on its own. A scroll sitting in a pedestal with everything in order still
+waits for the **Start** button; while a run is going the same button reads **Pause**, and pausing is
+always allowed.
+
+Nothing is lost by a pause, an interruption or an unmet condition. Progress is kept and the run
+simply stops advancing — that is also what happens if a dependency stops being met halfway, or if
+the scroll is moved to a pedestal of the wrong tier.
 
 ## Handing in dependencies
 
@@ -66,7 +91,7 @@ Boosters are declared in
 [`researchBoosters`](/wiki/server/config-files/gameplay-toml#research), one comma-separated string
 per entry:
 
-```
+```text
 "block_id, speed_percent, cost_percent, tier, mode"
 ```
 

@@ -1,5 +1,6 @@
 ---
 title: NBT & Data Components
+description: "Gating only the stacks that match a criterion — an enchanted book with Sharpness, a potion with one effect, a modded item in one state."
 sidebar_position: 2
 ---
 

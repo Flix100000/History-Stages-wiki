@@ -1,5 +1,6 @@
 ---
 title: gameplay.toml
+description: "Lookup list for every key in gameplay.toml — what happens in the background."
 sidebar_position: 3
 ---
 

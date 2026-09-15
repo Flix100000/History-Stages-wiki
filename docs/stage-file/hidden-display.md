@@ -1,5 +1,6 @@
 ---
 title: Hidden Display
+description: "What a player who has not unlocked the stage yet sees in place of the real name, tooltip and lock hint."
 sidebar_position: 4
 ---
 

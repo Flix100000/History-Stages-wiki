@@ -1,5 +1,6 @@
 ---
 title: Getting Help & Reporting Bugs
+description: "Where to ask, what the load report already tells you, and what belongs in a bug report."
 sidebar_position: 2
 ---
 

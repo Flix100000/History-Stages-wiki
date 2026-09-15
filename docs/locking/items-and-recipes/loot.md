@@ -1,5 +1,6 @@
 ---
 title: Loot
+description: "Keeping locked items out of chest loot and mob drops, per player, and replacing them with something else."
 sidebar_position: 6
 ---
 

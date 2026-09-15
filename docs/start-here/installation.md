@@ -1,5 +1,6 @@
 ---
 title: Installation & Your First Stage
+description: "What to install alongside History Stages, and how to build your first stage in the in-game editor."
 sidebar_position: 2
 ---
 
@@ -27,7 +28,7 @@ without it.
 Install the mod and start the game once. History Stages creates its folders and writes its default
 settings:
 
-```
+```text
 config/historystages/
     global/              stage files that apply to everyone
     individual/          stage files tracked per player

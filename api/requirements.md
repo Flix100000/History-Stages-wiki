@@ -1,6 +1,7 @@
 ---
 title: Requirements
-sidebar_position: 3
+description: "Registering a new way to earn a stage, alongside the nine kinds that ship with the mod."
+sidebar_position: 5
 ---
 
 :::info

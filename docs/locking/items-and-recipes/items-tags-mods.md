@@ -1,5 +1,6 @@
 ---
 title: Items, Tags & Mods
+description: "Gating single items, whole item tags, every item from a mod, and carving exceptions back out of a mod lock."
 sidebar_position: 1
 ---
 

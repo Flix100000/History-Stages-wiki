@@ -138,7 +138,7 @@ The `biomes` block restricts players from surviving in specific biomes until the
 }
 ```
 
-While a player stands inside a locked biome, the mod can apply potion effects, deal periodic damage, show a periodic warning message, and cancel right-clicks, left-clicks/mining, and projectile impacts — all configurable per-server in `historystages-common.toml` under `biome_lock` (see [Configuration](./configuration.md#biome-locking-biome_lock)). This mirrors the existing structure-lock behaviour, applied to biomes instead of structure zones.
+While a player stands inside a locked biome, the mod can apply potion effects, deal periodic damage, show a periodic warning message, and cancel right-clicks, left-clicks/mining, and projectile impacts — all configurable per-server in `historystages-common.toml` under `biome_lock` (see [Configuration](./configuration.md)). This mirrors the existing structure-lock behaviour, applied to biomes instead of structure zones.
 
 ### Structure Generation Limits
 
@@ -282,7 +282,7 @@ Stage JSON files can be organized into nested subfolders under `config/historyst
 
 Folder and file names may contain letters, digits, `-`, and `_`, but cannot start with `_` (an underscore prefix opts a file or folder out of loading — see below) and cannot use `..`, backslashes, or drive letters. Folders can be nested up to 8 levels deep.
 
-The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](./in-game-editor.md#organize-mode).
+The in-game editor's **organize mode** on the Stage Overview screen lets you tick multiple stages and folders and drag them onto a target folder in one move — moving a folder brings its contents along automatically. See [In-Game Editor](./in-game-editor.md).
 
 ### Ignored Files
 

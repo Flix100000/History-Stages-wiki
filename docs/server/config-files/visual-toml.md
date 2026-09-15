@@ -1,5 +1,6 @@
 ---
 title: visual.toml
+description: "Lookup list for every key in visual.toml — what a player sees or hears."
 sidebar_position: 2
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: In-Game Editor
+description: "Building an entire pack's stages from the pause menu: tabs, pickers, right-click menus and what each of them writes."
 sidebar_position: 1
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Research Scrolls
+description: "The item that carries a stage into the pedestal, the progress it remembers, and the readable document an opened scroll becomes."
 sidebar_position: 2
 ---
 
@@ -41,7 +42,7 @@ writes, and because a server owner may end up reading it in the file.
 
 Each entry in `lines` is a pipe-delimited string:
 
-```
+```text
 id|enabled|spacerBefore|style|text
 ```
 
@@ -130,14 +131,14 @@ the entry only appears or disappears in the recipe browser after a restart.
 
 For testing, or as a quest reward:
 
-```
+```text
 /give @s historystages:research_scroll[minecraft:custom_data={StageResearch:"bronze_age"}]
 ```
 
 Replace `bronze_age` with the stage id. On versions before 1.20.5 the older NBT syntax applies
 instead:
 
-```
+```text
 /give @s historystages:research_scroll{StageResearch:"bronze_age"}
 ```
 

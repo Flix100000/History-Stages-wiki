@@ -1,5 +1,6 @@
 ---
 title: Zones
+description: "Areas you draw yourself, each with its own rules for entry, spawning and building. Beta."
 sidebar_position: 3
 ---
 

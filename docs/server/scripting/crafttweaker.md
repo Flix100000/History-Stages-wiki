@@ -1,5 +1,6 @@
 ---
 title: CraftTweaker
+description: "Reading stage state, unlocking and relocking stages, and reacting to stage events from CraftTweaker."
 sidebar_position: 2
 ---
 

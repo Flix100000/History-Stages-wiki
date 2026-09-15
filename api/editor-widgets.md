@@ -1,6 +1,7 @@
 ---
 title: Editor Widgets
-sidebar_position: 8
+description: "The row widget, pickers, right-click menus and the rest of the catalogue every editor tab is built from."
+sidebar_position: 10
 ---
 
 The reference side of the toolkit: the row widget every tab is built from, the ready-made picker, the

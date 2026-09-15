@@ -1,6 +1,7 @@
 ---
 title: Auto-Triggers
-sidebar_position: 4
+description: "Registering your own notion of progress so a stage can unlock itself when it happens."
+sidebar_position: 6
 ---
 
 :::info

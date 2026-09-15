@@ -1,6 +1,7 @@
 ---
 title: Addon Development
-sidebar_position: 1
+description: "Registering your own gated content, requirements and editor tabs from another mod, with no fork and no mixin."
+sidebar_position: 3
 ---
 
 :::info

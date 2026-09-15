@@ -1,5 +1,6 @@
 ---
 title: Versions & Platforms
+description: "Which mod version runs on NeoForge, Forge and Fabric, and which features each of them has."
 sidebar_position: 1
 ---
 

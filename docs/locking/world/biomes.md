@@ -1,5 +1,6 @@
 ---
 title: Biomes
+description: "Making a biome unsurvivable until the stage opens — effects, damage, a warning, and refused interactions."
 sidebar_position: 2
 ---
 

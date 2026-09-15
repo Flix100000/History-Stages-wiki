@@ -1,5 +1,6 @@
 ---
 title: Config Files
+description: "The three settings files, who owns them, and which of them reaches the client."
 sidebar_position: 1
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 1
 
 History Stages keeps its settings in three TOML files:
 
-```
+```text
 config/historystages/settings/
     visual.toml      what a player sees or hears
     gameplay.toml    what happens in the background

@@ -1,5 +1,6 @@
 ---
 title: KubeJS
+description: "Reading stage state, unlocking and relocking stages, and reacting to stage events from KubeJS."
 sidebar_position: 1
 ---
 
@@ -80,7 +81,7 @@ because guessing a namespace for it would break the day two addons pick the same
 
 `HistoryStages.categories()` lists what is actually registered, in full:
 
-```
+```text
 historystages:items          historystages:mods            historystages:recipes
 historystages:tags           historystages:mod_exceptions  historystages:dimensions
 historystages:structures     historystages:biomes          historystages:attacklock

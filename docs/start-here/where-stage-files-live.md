@@ -1,5 +1,6 @@
 ---
 title: Where Stage Files Live
+description: "Every folder History Stages reads or writes, why the file name is the stage id, and how subfolders work."
 sidebar_position: 4
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 4
 
 Everything History Stages reads and writes sits under `config/historystages/`:
 
-```
+```text
 config/historystages/
     global/              one .json per global stage
     individual/          one .json per individual stage
@@ -37,7 +38,7 @@ gone** — nothing migrates it.
 
 Both stage folders take nested subfolders, up to 8 levels deep:
 
-```
+```text
 config/historystages/global/
     ages/
         stone_age.json
@@ -70,7 +71,7 @@ and drags them onto a target folder in one move; moving a folder brings its cont
 
 Any file or folder whose name starts with an underscore is skipped at load time:
 
-```
+```text
 global/
     _templates/          a whole folder, ignored
         era_template.json

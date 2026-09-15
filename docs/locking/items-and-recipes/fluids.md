@@ -1,5 +1,6 @@
 ---
 title: Fluids
+description: "Gating a fluid rather than a bucket, so one entry covers every tank and container item in the pack — and every recipe that touches it."
 sidebar_position: 5
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Mod Compatibility
-sidebar_position: 3
+description: "The mods History Stages recognises and what each integration does — recipe viewers, FTB Quests, Jade, Curios, and the required Lootr."
+sidebar_position: 4
 ---
 
 # Mod Compatibility

@@ -1,6 +1,7 @@
 ---
 title: Editor Toolkit
-sidebar_position: 7
+description: "The three tiers of editor UI an addon can write, from reusing a ready-made list to drawing a tab yourself."
+sidebar_position: 9
 ---
 
 :::info

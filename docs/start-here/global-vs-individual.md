@@ -1,5 +1,6 @@
 ---
 title: Global vs Individual Stages
+description: "Server-wide stages and per-player stages, what each of them can lock, and what happens when the same content sits in both."
 sidebar_position: 3
 ---
 
@@ -208,6 +209,15 @@ interaction locks, and all three trade categories are covered.
 2. **Phase 2 (Individual):** once the global unlock happens, the recipe becomes craftable again, but
    each player still cannot use or pick up the item until they unlock their individual stage
    themselves.
+
+```mermaid
+flowchart LR
+    A["One steel ingot, listed in<br/>a global and an individual stage"] --> B{"Global stage<br/>unlocked?"}
+    B -- no --> P1["Phase 1<br/>nobody has it,<br/>nobody crafts it"]
+    B -- yes --> C{"This player's<br/>individual stage<br/>unlocked?"}
+    C -- no --> P2["Phase 2<br/>the recipe works again,<br/>this player still cannot<br/>pick it up or use it"]
+    C -- yes --> D["Open for that player"]
+```
 
 Dual-phase entries get a `[Dual]` badge in the in-game editor and their own lock icon in the
 player's inventory.

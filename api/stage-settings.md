@@ -1,6 +1,7 @@
 ---
 title: Stage Settings
-sidebar_position: 5
+description: "Your own settings on every stage, stored in the stage file and travelling with the pack."
+sidebar_position: 7
 ---
 
 :::info

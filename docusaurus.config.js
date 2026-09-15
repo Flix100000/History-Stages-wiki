@@ -202,6 +202,18 @@ const config = {
     ],
   ],
 
+  // Cookie-free visit counting: no banner, no personal data, and it skips localhost by
+  // itself, so a dev server does not show up in the numbers.
+  scripts: [
+    {
+      src: 'https://gc.zgo.at/count.js',
+      async: true,
+      'data-goatcounter': 'https://historystages.goatcounter.com/count',
+    },
+  ],
+
+  clientModules: [require.resolve('./src/clientModules/searchTerms.js')],
+
   themes: ['@docusaurus/theme-mermaid'],
   markdown: {
     mermaid: true,

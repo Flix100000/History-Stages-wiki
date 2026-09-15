@@ -37,5 +37,5 @@ feature requests are welcome there or on [Discord](https://discord.gg/BeZzxyZ9c4
 has the build instructions, the code style and the contributor terms.
 
 Documentation lives in its own repository —
-[History-Stages-wiki](https://github.com/Flix100000/History-Stages-wiki). Every page has an
+[historystages.github.io](https://github.com/HistoryStages/historystages.github.io). Every page has an
 "Edit this page" link at the bottom.

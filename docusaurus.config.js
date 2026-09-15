@@ -19,13 +19,14 @@ const config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
-  url: 'https://flix100000.github.io',
-  // For GitHub Pages deployment, this is '/<repo-name>/'
-  baseUrl: '/History-Stages-wiki/',
+  url: 'https://historystages.github.io',
+  // The repo is named historystages.github.io, so GitHub serves it as the organisation's
+  // own site: no repo path in the address.
+  baseUrl: '/',
 
   // GitHub pages deployment config.
-  organizationName: 'Flix100000', // GitHub org/user name.
-  projectName: 'History-Stages-wiki', // Repo name.
+  organizationName: 'HistoryStages', // GitHub org/user name.
+  projectName: 'historystages.github.io', // Repo name.
 
   onBrokenLinks: 'throw', // migration safety net — build fails on any bad internal link
   // Anchors only break when a heading is renamed, which is exactly the edit nobody rechecks.
@@ -47,7 +48,7 @@ const config = {
         docs: {
           routeBasePath: 'wiki',
           sidebarPath: './sidebars.js',
-          editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+          editUrl: 'https://github.com/HistoryStages/historystages.github.io/edit/main/',
           // Needs the full history in CI (fetch-depth: 0), otherwise every page claims
           // to have been written on the day of the last deploy.
           showLastUpdateTime: true,
@@ -85,7 +86,7 @@ const config = {
         path: 'api',
         routeBasePath: 'api',
         sidebarPath: './sidebarsApi.js',
-        editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+        editUrl: 'https://github.com/HistoryStages/historystages.github.io/edit/main/',
         showLastUpdateTime: true,
       }),
     ],
@@ -248,7 +249,7 @@ const config = {
           'These pages describe <strong>6.0.x</strong> (NeoForge 1.21.1). Playing on ' +
           '<strong>Forge 1.20.1</strong> or <strong>Fabric</strong>? Those builds are older — ' +
           'use the version picker, or see ' +
-          '<a href="/History-Stages-wiki/wiki/about/versions-and-platforms">Versions &amp; Platforms</a>.',
+          '<a href="/wiki/about/versions-and-platforms">Versions &amp; Platforms</a>.',
         isCloseable: true,
       },
       navbar: {

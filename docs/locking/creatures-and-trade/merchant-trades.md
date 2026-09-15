@@ -26,6 +26,14 @@ only if none of the three gates it.
 }
 ```
 
+## In the editor
+
+The **Trades** tab. Its picker lists **real offers** rather than every item in the game — pick a
+profession and you see what that merchant actually trades, at which level, for what price. Most of
+this block is written by clicking.
+
+Professions and the pack-wide level gate are set on the same tab, next to the offer list.
+
 ## `offers` — one named trade
 
 | Field | Meaning |

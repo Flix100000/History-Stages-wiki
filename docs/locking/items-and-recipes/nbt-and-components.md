@@ -26,6 +26,16 @@ the mod item in a particular state.
 
 Only Sharpness I–IV books are locked here. Every other enchanted book behaves normally.
 
+## In the editor
+
+The NBT editor, reached from an item or tag row's own menu. Criteria are built as cards, with
+presets for the fields items commonly carry and a free-form dialog for anything else, plus live
+validation.
+
+The quickest route is not to build one at all: hold the item and **Ctrl-click** an inventory slot to
+import that exact stack's state. Failing that, `/history debug nbt preset`, `/history debug nbt
+custom` and `/history debug nbt components` print what the held item carries, ready to copy.
+
 ## Legacy NBT and data components
 
 Minecraft 1.21 moved most item state out of free-form NBT and into **data components**. History

@@ -24,6 +24,15 @@ stack what it is *carrying* rather than what it is, so a single `minecraft:lava`
 vanilla bucket, every modded bucket, and every filled tank item in the pack — without one item id
 appearing in the stage file.
 
+## In the editor
+
+The **Fluids** tab, with a picker over every fluid in the pack. Each row carries a
+`[Recipes: N]` badge saying how many recipes that entry would reach — worth a look before adding
+one, since that number is frequently larger than people expect.
+
+The seven actions below are set from the row's own lock-actions menu, the same way item entries
+work.
+
 ## The seven actions
 
 A fluid's action vocabulary is shorter than an item's, and has one action items do not have:

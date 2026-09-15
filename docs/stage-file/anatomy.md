@@ -5,8 +5,15 @@ sidebar_position: 1
 
 # Anatomy of a Stage File
 
-One stage is one JSON file. Every field is optional except the ones you actually want to use — a
-file holding nothing but a `display_name` is valid and simply locks nothing.
+Most of the time you will never write this by hand. The
+[in-game editor](/wiki/in-game-tools/in-game-editor) produces exactly the file below, with a tab per
+field group, and that is how nearly every pack gets built.
+
+This page is still worth having: it is what the editor is writing, it is how the rest of this wiki
+names things, and it is what you read when a stage misbehaves.
+
+One stage is one JSON file. Every field is optional — a file holding nothing but a `display_name`
+is valid and simply locks nothing.
 
 ```json title="config/historystages/global/bronze_age.json"
 {
@@ -28,9 +35,12 @@ file holding nothing but a `display_name` is valid and simply locks nothing.
 The stage's **id is the file name**, not a field —
 see [Where Stage Files Live](/wiki/start-here/where-stage-files-live).
 
-This page is a map of the fields. Each group links to the page that actually explains it.
+Each group below links to the page that explains it, and each says where the same setting lives in
+the editor.
 
 ## Identity
+
+*In the editor:* **Stage Settings**, the button on the stage's own screen.
 
 | Field | Type | What it does |
 | :--- | :--- | :--- |
@@ -38,6 +48,9 @@ This page is a map of the fields. Each group links to the page that actually exp
 | `icon` | String | Item id used as the icon in unlock toasts. Falls back to the `defaultStageIcon` setting. |
 
 ## How it is researched
+
+*In the editor:* **Stage Settings** for the mode, the research time and the tier gate; the
+**Dependency Editor** for `dependencies`.
 
 | Field | Type | What it does |
 | :--- | :--- | :--- |
@@ -51,6 +64,9 @@ This page is a map of the fields. Each group links to the page that actually exp
 | `scroll_completion` | String | What happens to the scroll when research finishes — `"consume"`, `"replace"` or `"open"`. Overrides the server-wide `defaultScrollCompletion`. → [Research Scrolls](/wiki/in-game-tools/research/scrolls#what-happens-when-research-finishes) |
 
 ## What it locks
+
+*In the editor:* one tab per row below — Items, Tags, Mods, Exceptions, Recipes, Fluids,
+Dimensions, Structures, Biomes, Zones, Entities (as Attack / Interaction / Spawn) and Trades.
 
 | Field | Type | What it locks |
 | :--- | :--- | :--- |
@@ -73,12 +89,18 @@ Loot has no field of its own — locked items are filtered out of chest loot and
 
 ## How it behaves once it exists
 
+*In the editor:* **Stage Settings** — `hidden_display` as the Display card, `lose_on_death` as a
+switch next to it on individual stages.
+
 | Field | Type | What it does |
 | :--- | :--- | :--- |
 | `hidden_display` | Object | What locked players see instead of the real name and tooltip. → [Hidden Display](/wiki/stage-file/hidden-display) |
 | `lose_on_death` | Boolean | Individual stages only. Relocks the stage when its owner dies. → [Lose on Death](/wiki/start-here/global-vs-individual#lose-on-death) |
 
 ## Fields other mods own
+
+*In the editor:* an installed addon gets its own tab; an uninstalled one's data is carried through
+without a tab to show it.
 
 | Field | Type | What it does |
 | :--- | :--- | :--- |

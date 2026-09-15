@@ -33,6 +33,12 @@ The tooltip is fully configurable under
 [`[scroll_tooltip]`](/wiki/server/config-files/visual-toml#scroll_tooltip) in **visual.toml**, and
 through a dedicated screen in the [Config Editor](/wiki/in-game-tools/in-game-editor).
 
+The pipe-delimited strings below are not meant to be typed. The
+[Config Editor](/wiki/in-game-tools/in-game-editor#the-config-editor) has a screen for this one:
+sections as rows you drag into order, with their switches and colours next to them and a live
+preview of the finished tooltip. The format is documented here because it is what that screen
+writes, and because a server owner may end up reading it in the file.
+
 Each entry in `lines` is a pipe-delimited string:
 
 ```

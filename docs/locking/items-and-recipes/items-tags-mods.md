@@ -17,6 +17,16 @@ matches — the difference is only how wide the net is.
 }
 ```
 
+## In the editor
+
+Four tabs of their own on a stage: **Items**, **Tags**, **Mods** and **Exceptions**. Each has a
+search bar over the live registry, a button to pick straight out of your own inventory, and a
+multi-select mode with a **Selected** tab for adding many at once.
+
+An entry already in the list opens its own menu: that is where the
+[NBT criteria](/wiki/locking/items-and-recipes/nbt-and-components) and the
+[lock actions](/wiki/locking/items-and-recipes/unlock-actions) are set.
+
 ## What "locked" means
 
 By default a matched item is gated for **everything**: using it, attacking with it, wearing it,

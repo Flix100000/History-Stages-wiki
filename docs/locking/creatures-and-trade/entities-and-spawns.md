@@ -24,6 +24,18 @@ since 6.0 none of them implies another:
 | [`interactionlock`](#interactionlock) | May the player breed, mount, shear, name it? | global + individual |
 | [`spawnlock`](#spawnlock) | May it appear at all? | **global only** |
 
+## In the editor
+
+The three lists are three tabs of their own: **Attack**, **Interaction** and **Spawn**. The entity
+pickers work like the item picker, multi-select included.
+
+A spawn entry is a rule rather than a tick, so it opens the
+[spawn dialog](/wiki/in-game-tools/in-game-editor#the-spawn-rule-dialog): the phase at the top, then
+Sources, Location, Time & Weather and Extra biomes as tabs, with a line underneath that spells the
+finished rule out in words.
+
+An interaction entry opens a smaller menu for its actions and its held-item filter.
+
 ## `attacklock`
 
 A flat list of entity ids. While the stage is locked, every attack the player makes against one is

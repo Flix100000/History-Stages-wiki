@@ -8,6 +8,18 @@ sidebar_position: 1
 Two ways to put a place out of reach: refuse entry to a whole dimension, or wall off a single
 structure inside the world. A third option caps how often a structure is allowed to generate at all.
 
+## In the editor
+
+Two tabs: **Dimensions** and **Structures**, each with a searchable picker. The structure picker
+takes structure tags as well as ids.
+
+A structure already in the list has a context menu, and that is where
+[generation limits](#generation-limits) are set — `block_generation` is not a separate tab.
+
+Standing somewhere and not knowing what it is called is the usual problem.
+`/history debug structure` prints the structure ids and tags at your feet, and
+`/history debug viz` draws the lock zone the current settings would produce.
+
 ## Dimensions
 
 A flat list of dimension ids. A player who tries to enter one while the stage is locked is turned

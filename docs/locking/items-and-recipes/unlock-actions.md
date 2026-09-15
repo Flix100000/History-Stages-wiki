@@ -36,6 +36,15 @@ action you leave out stays blocked. A plain string entry, or an object without `
 locks everything.
 :::
 
+## In the editor
+
+Not a tab of its own — it hangs off an entry. Open the menu on an item, tag or mod row and pick the
+lock-actions editor; the actions are tick boxes, and the labels in the table below are what you see
+there.
+
+The same thing exists for entity interaction entries and for fluid rows, each with its own shorter
+set of actions.
+
 ## The actions
 
 | Action | Editor label | What it covers |

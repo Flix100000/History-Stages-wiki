@@ -50,15 +50,19 @@ designing a pack. It carries the full matrix of which lock works in which mode, 
 | [Entities & Spawns](/wiki/locking/creatures-and-trade/entities-and-spawns) | Stop attacks, stop breeding and mounting, or write a full spawn rule. |
 | [Merchant Trades](/wiki/locking/creatures-and-trade/merchant-trades) | Gate one offer, a whole villager profession, or a merchant level everywhere. |
 
-## Two ways to build stages
+## Build it in the game
 
-**In the game.** The [In-Game Editor](/wiki/in-game-tools/in-game-editor) opens from the pause menu
-with permission level 2. It has searchable pickers for items, recipes, fluids, entities, structures
-and trades, a visual NBT editor, a zone editor with a map, and a dependency editor. Most packs are
-built entirely here.
+The [In-Game Editor](/wiki/in-game-tools/in-game-editor) is the normal way to build a pack, and
+almost every pack is built entirely in it. Pause menu, permission level 2, or `/history editor`.
 
-**By hand.** Stages are plain JSON files under `config/historystages/`, one file per stage. The
-editor writes the same files, so the two can be mixed freely.
+A stage opens with one tab per thing it can lock, plus searchable pickers that read the live
+registry, a visual NBT editor, a zone editor with a map, and a dependency editor. You cannot write
+an id that does not exist, and a save reloads immediately.
+
+**The files underneath are plain JSON**, one per stage, under `config/historystages/`. They are
+readable and editable by hand, and the editor writes the same format — so the two mix freely. This
+wiki describes stages by their fields rather than by which button to press, because a field is
+easier to name; each page says where in the editor the same thing lives.
 
 → [Installation & Your First Stage](/wiki/start-here/installation) ·
 [Where Stage Files Live](/wiki/start-here/where-stage-files-live) ·

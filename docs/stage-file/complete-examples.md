@@ -9,6 +9,10 @@ Whole stage files, ready to copy. Each one says which folder it belongs in, beca
 [that is what decides whether it is global or individual](/wiki/start-here/global-vs-individual) —
 and several of these use fields that only work in one of the two.
 
+These are for reading and for dropping straight into a config folder. Building the same thing in
+the [editor](/wiki/in-game-tools/in-game-editor) is usually quicker and is what most packs do; drop
+a file in only if you want to start from one of these, and run `/history reload` afterwards.
+
 Narrower, field-by-field examples live on the page for each lock type; these are the files that show
 how the pieces sit together.
 

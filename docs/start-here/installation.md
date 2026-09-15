@@ -39,10 +39,25 @@ Nothing is locked yet. The two stage folders are empty, and an empty folder mean
 
 ## Your first stage
 
-A stage is one JSON file. Its **id is the file name** — `bronze_age.json` defines the stage
-`bronze_age` — and the id is what commands, dependencies and scripts refer to.
+**Open the editor.** Pause menu, History Stages button, or `/history editor` — you need permission
+level 2. Press **New stage**, give it a display name, and you are looking at a stage with a tab per
+thing it can lock: Items, Tags, Mods, Recipes, Fluids, Dimensions, Structures, Biomes, Zones,
+Entities, Trades.
 
-Save this as `config/historystages/global/bronze_age.json`:
+Go to **Items**, search for `iron_ingot`, tick it, press **Add**. Save. That is a working stage —
+iron ingots are now out of reach until somebody unlocks it.
+
+This is how nearly every pack gets built. The pickers read the live registry, so you cannot type an
+id that does not exist, and a save reloads immediately. Past a handful of entries, typing ids by
+hand stops being worth it.
+
+### The same stage as a file
+
+The editor writes plain JSON, one file per stage, and those files are readable and editable by
+hand. Knowing what they look like is worth it even if you never write one — it is what the rest of
+this wiki shows, because a field is easier to name than a button.
+
+The stage you just made is `config/historystages/global/<its id>.json`:
 
 ```json title="config/historystages/global/bronze_age.json"
 {
@@ -54,31 +69,22 @@ Save this as `config/historystages/global/bronze_age.json`:
 }
 ```
 
-Then reload:
+The stage's **id is the file name** — `bronze_age.json` is the stage `bronze_age` — and that id is
+what commands, dependencies and scripts refer to. `display_name` is only the label players read.
 
-```
-/history reload
-```
+Writing one by hand works fine. Two rules come with it:
 
-:::warning[Reload is not optional]
-A stage file edited by hand does nothing until `/history reload` runs — the mod reads the folders at
-startup and on that command, not on every file change. The in-game editor reloads by itself when it
-saves, so this only applies to hand-edited files.
+:::warning[Hand edits need a reload, and the editor can overwrite them]
+A file you edited by hand does nothing until `/history reload` runs — the server reads the folders
+at startup and on that command, not when a file changes.
+
+And it has to be that way round: if you edit a file and then save that stage from the editor, the
+editor writes the whole file from the version it still has in memory, and your edit is gone. Reload
+first, then open the editor.
 :::
 
-Iron ingots and everything in the `c:ores/iron` tag are now out of reach, and the iron pickaxe
-recipe shows a padlock in JEI. `/history global unlock bronze_age` opens it again.
-
-## The other way: build it in the game
-
-The [In-Game Editor](/wiki/in-game-tools/in-game-editor) does the same thing without a text editor.
-Open the pause menu with permission level 2 and use the History Stages button, or run
-`/history editor`. It writes the same JSON files, so a pack can be started in the editor and
-finished by hand, or the other way round.
-
-For anything past a handful of entries, the editor is the faster route — it has searchable pickers
-for items, recipes, fluids, entities, structures and trades, and it will not let you write an id
-that does not exist.
+Whichever way you built it, `/history global unlock bronze_age` opens the stage again, and
+`/history global lock bronze_age` puts it back.
 
 ## Players still cannot research anything
 

@@ -23,6 +23,14 @@ listed as an action that stays free.
 What happens to the filtered slot — empty, or something else in its place — is a server-wide
 decision in [gameplay.toml](/wiki/server/config-files/gameplay-toml#loot_replacements).
 
+## In the editor
+
+There is no Loot tab, because loot is not a category of its own. The `loot` action sits in the
+lock-actions menu of an ordinary item, tag or mod entry, alongside `use`, `pickup` and the rest.
+
+Replacement is server-wide and lives in the **Common** tab of the
+[Config Editor](/wiki/in-game-tools/in-game-editor#the-config-editor) under `loot_replacements`.
+
 ## Chest loot goes through Lootr
 
 This is why [Lootr is a required dependency](/wiki/start-here/installation#what-you-need-alongside-it).

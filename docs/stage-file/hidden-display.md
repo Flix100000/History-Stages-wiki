@@ -9,6 +9,14 @@ sidebar_position: 4
 item. It changes nothing about whether the item is locked — only how it presents itself. Once the
 stage is unlocked, everything displays normally again.
 
+## In the editor
+
+Not a tab — it belongs to the stage rather than to one lock category. **Stage Settings**, the button
+on the stage's own screen, holds it as the **Display** card: the two modes as dropdowns, their
+replacement texts as fields, and the lock-hint switch.
+
+Per-entry overrides are set where the entry is, from an item or tag row's own menu.
+
 ```json
 {
   "hidden_display": {

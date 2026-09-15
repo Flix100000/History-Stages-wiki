@@ -19,6 +19,17 @@ There are two ways a recipe ends up gated, and they are worth keeping apart:
 }
 ```
 
+## In the editor
+
+The **Recipes** tab. Its picker is two columns: everything recipes produce on the left, that item's
+actual recipes as cards on the right, drawn in the recipe's real shape — which is the only way to
+tell apart two recipes that use the same ingredients differently.
+
+Selection survives moving between items, so several recipes across several items can be gathered
+before pressing **Add**. On an individual stage the picker offers only the recipe types that can be
+gated per player, and says so under the grid. →
+[The Recipe Picker](/wiki/in-game-tools/in-game-editor#the-recipe-picker)
+
 ## What it actually does depends on the scope
 
 This is the single biggest source of confusion in the mod, so it is worth stating plainly:

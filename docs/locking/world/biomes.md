@@ -22,6 +22,14 @@ damage, a warning, and interactions refused — until the stage opens.
 Entries are biome ids, or biome **tags** with a `#` prefix. Everything else about the behaviour is
 server-wide rather than per entry.
 
+## In the editor
+
+The **Biomes** tab on a stage, with a searchable picker over every biome and biome tag the pack has
+loaded.
+
+The behaviour itself is not on this tab — it is server-wide, and lives in the **Common** tab of the
+[Config Editor](/wiki/in-game-tools/in-game-editor#the-config-editor) under `biome_lock`.
+
 ## What happens while a player stands there
 
 All of it is configured once, in

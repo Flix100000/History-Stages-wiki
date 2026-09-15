@@ -24,6 +24,15 @@ Mode and [dependencies](/wiki/stage-file/dependencies) are separate things: depe
 has to be true *before* a stage may be researched, and only `default` and `external` stages have
 research to gate.
 
+## In the editor
+
+**Stage Settings**, the button on the stage's own screen. The mode is a dropdown, and picking one
+swaps the card underneath it for that mode's own settings — the trigger list for `auto`, the
+duration and cooldown for `temporary`, a note for `external` explaining that the pedestal will
+refuse it.
+
+Triggers are added from a searchable list, with the combine mode (any or all) above them.
+
 ## default
 
 The standard mode. A Research Scroll is generated for this stage and players unlock it by researching that scroll at a Research Pedestal.

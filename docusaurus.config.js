@@ -227,6 +227,18 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
+      // For something that stops being true, not for a standing note -- a bar nobody can
+      // get rid of stops being read and still sits on all 52 pages. The id is what a
+      // dismissal is remembered against, so a new message needs a new id to come back.
+      announcementBar: {
+        id: 'version_notice_6_0_x',
+        content:
+          'These pages describe <strong>6.0.x</strong> (NeoForge 1.21.1). Playing on ' +
+          '<strong>Forge 1.20.1</strong> or <strong>Fabric</strong>? Those builds are older — ' +
+          'use the version picker, or see ' +
+          '<a href="/History-Stages-wiki/wiki/about/versions-and-platforms">Versions &amp; Platforms</a>.',
+        isCloseable: true,
+      },
       navbar: {
         title: 'History Stages',
         logo: {

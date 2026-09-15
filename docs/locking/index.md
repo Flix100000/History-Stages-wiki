@@ -9,34 +9,7 @@ A stage holds a list per kind of content. The kind decides which field the entry
 scope it works in, and what a player runs into when they try anyway — but the shape is always the
 same: a list on a stage, and everything in it is out of reach until the stage opens.
 
-## Start from what you want to stop
-
-```mermaid
-flowchart LR
-    Q["What should be out of reach?"] --> I["A thing players hold or make"]
-    Q --> W["A place"]
-    Q --> C["Something alive"]
-
-    I --> I1{"All of it,<br/>or only some stacks?"}
-    I1 -- "all of it" --> I2["items, tags, mods"]
-    I1 -- "only enchanted,<br/>only a state" --> I3["NBT criteria"]
-    I --> I4{"The thing itself,<br/>or one way to get it?"}
-    I4 -- "one way" --> I5["recipes"]
-    I4 -- "the liquid,<br/>not the bucket" --> I6["fluids"]
-    I4 -- "keep it out of chests" --> I7["loot"]
-
-    W --> W1["a whole dimension"]
-    W --> W2["one structure"]
-    W --> W3["a biome"]
-    W --> W4["an area you draw"]
-
-    C --> C1["attacking it"]
-    C --> C2["breeding, mounting, talking to it"]
-    C --> C3["it spawning at all"]
-    C --> C4["what it sells"]
-```
-
-Every one of those can also be narrowed to single interactions rather than all of them — carry the
+Every one of them can also be narrowed to single interactions rather than all of them — carry the
 sword but do not swing it, craft the ingot but do not wear the armour. →
 [Unlock Actions](/wiki/locking/items-and-recipes/unlock-actions)
 

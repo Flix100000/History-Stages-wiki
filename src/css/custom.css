@@ -79,3 +79,22 @@
   width: 1.2em;
   height: 1.2em;
 }
+
+/* The announcement bar ships light grey, which reads as "part of the page" in dark mode.
+   Given the brand colours instead, and told apart from the navbar by the bottom rule. */
+.theme-announcement-bar {
+  background: #f7ecd8;
+  color: #4a3410;
+  border-bottom: 1px solid rgba(184, 121, 31, 0.45);
+  font-size: 0.92rem;
+}
+[data-theme='dark'] .theme-announcement-bar {
+  background: #2c2114;
+  color: #e9d8b4;
+  border-bottom-color: rgba(224, 165, 62, 0.35);
+}
+.theme-announcement-bar a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

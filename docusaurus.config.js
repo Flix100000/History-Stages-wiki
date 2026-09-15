@@ -28,7 +28,8 @@ const config = {
   projectName: 'History-Stages-wiki', // Repo name.
 
   onBrokenLinks: 'throw', // migration safety net — build fails on any bad internal link
-  onBrokenMarkdownLinks: 'warn',
+  // Anchors only break when a heading is renamed, which is exactly the edit nobody rechecks.
+  onBrokenAnchors: 'throw',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -47,6 +48,9 @@ const config = {
           routeBasePath: 'wiki',
           sidebarPath: './sidebars.js',
           editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+          // Needs the full history in CI (fetch-depth: 0), otherwise every page claims
+          // to have been written on the day of the last deploy.
+          showLastUpdateTime: true,
           // The live tree is the current release, not an unreleased "next" -- cutting it into a
           // frozen folder once buried the whole site under /next/. It gets cut when 6.1 ships.
           lastVersion: 'current',
@@ -82,6 +86,101 @@ const config = {
         routeBasePath: 'api',
         sidebarPath: './sidebarsApi.js',
         editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
+        showLastUpdateTime: true,
+      }),
+    ],
+    [
+      '@docusaurus/plugin-client-redirects',
+      // The 6.0.x rewrite moved every page. These are the addresses from the first
+      // Docusaurus layout, which were live and are what an older link points at.
+      /** @type {import('@docusaurus/plugin-client-redirects').Options} */
+      ({
+        redirects: [
+          {from: '/wiki/general/intro', to: '/wiki/'},
+          {from: '/wiki/general/getting-started', to: '/wiki/start-here/installation'},
+          {
+            from: '/wiki/general/global-vs-individual-stages',
+            to: '/wiki/start-here/global-vs-individual',
+          },
+          {
+            from: '/wiki/modpack-developers/stage-basics/stage-configuration',
+            to: '/wiki/stage-file/anatomy',
+          },
+          {
+            from: '/wiki/modpack-developers/stage-basics/stage-modes',
+            to: '/wiki/stage-file/stage-modes',
+          },
+          {
+            from: [
+              '/wiki/modpack-developers/stage-basics/stage-examples',
+              '/wiki/modpack-developers/stage-basics/examples-basic',
+              '/wiki/modpack-developers/stage-basics/examples-entities-and-world',
+              '/wiki/modpack-developers/stage-basics/recipe-examples',
+            ],
+            to: '/wiki/stage-file/complete-examples',
+          },
+          {
+            from: '/wiki/modpack-developers/locking-zones/lock-types',
+            to: '/wiki/locking/items-and-recipes/items-tags-mods',
+          },
+          {
+            from: '/wiki/modpack-developers/locking-zones/world-locks',
+            to: '/wiki/locking/world/dimensions-and-structures',
+          },
+          {
+            from: '/wiki/modpack-developers/locking-zones/entity-and-trade-locks',
+            to: '/wiki/locking/creatures-and-trade/entities-and-spawns',
+          },
+          {from: '/wiki/modpack-developers/locking-zones/zones', to: '/wiki/locking/world/zones'},
+          {
+            from: '/wiki/modpack-developers/locking-zones/stage-behavior',
+            to: '/wiki/stage-file/hidden-display',
+          },
+          {
+            from: '/wiki/modpack-developers/in-game-tools/in-game-editor',
+            to: '/wiki/in-game-tools/in-game-editor',
+          },
+          {
+            from: '/wiki/modpack-developers/in-game-tools/stage-graph',
+            to: '/wiki/in-game-tools/stage-graph',
+          },
+          {
+            from: '/wiki/modpack-developers/in-game-tools/research-system',
+            to: '/wiki/in-game-tools/research/pedestal',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/configuration',
+            to: '/wiki/server/config-files',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/gameplay-toml',
+            to: '/wiki/server/config-files/gameplay-toml',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/visual-toml',
+            to: '/wiki/server/config-files/visual-toml',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/commands-and-permissions',
+            to: '/wiki/server/commands',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/mod-compatibility',
+            to: '/wiki/server/mod-compatibility',
+          },
+          {
+            from: [
+              '/wiki/modpack-developers/server-integration/scripting-with-kubejs-and-crafttweaker',
+              '/wiki/modpack-developers/server-integration/scripting-kubejs',
+            ],
+            to: '/wiki/server/scripting/kubejs',
+          },
+          {
+            from: '/wiki/modpack-developers/server-integration/scripting-crafttweaker',
+            to: '/wiki/server/scripting/crafttweaker',
+          },
+          {from: '/wiki/project/porting-history-stages', to: '/wiki/about/porting'},
+        ],
       }),
     ],
     // Screenshots are small enough to sit in the flow of a page and too small to read
@@ -103,10 +202,21 @@ const config = {
     ],
   ],
 
+  themes: ['@docusaurus/theme-mermaid'],
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/social-card.png',
+      mermaid: {
+        theme: {light: 'neutral', dark: 'dark'},
+      },
       zoom: {
         selector: '.markdown img',
         background: {

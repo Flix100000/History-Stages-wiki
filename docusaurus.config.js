@@ -61,17 +61,10 @@ const config = {
             '5.0.x': {noIndex: true},
           },
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // No blog. Release notes live on GitHub, CurseForge and Modrinth already, and a
+        // fourth place saying the same thing is a place that goes stale. Migration notes
+        // belong in the versioned docs instead — see wiki/server/upgrading-from-5x.
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -185,7 +178,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/wiki/general/getting-started',
+                to: '/wiki/start-here/installation',
               },
               {
                 label: 'Addon API',

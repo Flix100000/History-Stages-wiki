@@ -31,15 +31,15 @@ Items, tags, mods, structures, biomes, dimensions and the three entity locks are
 | `historystages:biomes` | Biome ids and biome tags | Global + Individual |
 | `historystages:zones` | Named areas a pack author draws themselves, each with its own rules | Global + Individual² |
 
-¹ Individually only at the stations that know which player is standing at them — crafting table, the 2×2 inventory grid, stonecutter, smithing table. → [Global vs Individual Stages](/wiki/general/global-vs-individual-stages) has the full list of what a per-player recipe gate does and does not reach.
+¹ Individually only at the stations that know which player is standing at them — crafting table, the 2×2 inventory grid, stonecutter, smithing table. → [Global vs Individual Stages](/wiki/start-here/global-vs-individual) has the full list of what a per-player recipe gate does and does not reach.
 
-² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Zones](/wiki/modpack-developers/locking-zones/zones).
+² Zones are in **beta** — the category is younger than the rest and still growing. Its one scope exception is the "no mob spawns" rule, which is global-only for the same reason `spawnlock` is. → [Zones](/wiki/locking/world/zones).
 
 Blocks have no category of their own — a block is gated through its item id in `historystages:items`.
 
 Neither the tab nor the JSON key is the unit — **the question is.** A category is one thing the lock engine can be asked, and the two containers around it group by whatever is convenient at that end.
 
-It comes apart in both directions. Attack, spawn and interaction are three categories sharing one `entities` object on disk *and* one tab, with a segment bar changing between the three sections; trades do the same with offers, professions and levels under `trades`. Both group coarser than the questions, because a packmaker gating a mob — or a merchant — thinks about one subject rather than three. Items go the other way: `items`, `tags` and `mods` are three categories, three keys and three tabs, and every one of them is a way of naming an item. Count the questions, not the tabs. → [Stage Configuration](/wiki/modpack-developers/stage-basics/stage-configuration) covers what those built-in fields mean for a packmaker.
+It comes apart in both directions. Attack, spawn and interaction are three categories sharing one `entities` object on disk *and* one tab, with a segment bar changing between the three sections; trades do the same with offers, professions and levels under `trades`. Both group coarser than the questions, because a packmaker gating a mob — or a merchant — thinks about one subject rather than three. Items go the other way: `items`, `tags` and `mods` are three categories, three keys and three tabs, and every one of them is a way of naming an item. Count the questions, not the tabs. → [Stage Configuration](/wiki/stage-file/anatomy) covers what those built-in fields mean for a packmaker.
 
 A section whose category does not serve the stage you are editing is greyed on the bar rather than hidden, and says why on hover — spawn locks on an individual stage are the one built-in case. The tab itself only disappears when *none* of its sections fits, so the two entity categories that do work per player stay reachable.
 

@@ -54,7 +54,7 @@ for (ServerPlayer target : targets) {
 | Reloads recipes | yes | — | yes | — |
 | Drops now-locked items from the inventory | — | — | — | yes |
 
-The recipe reload sits only on the two global methods because recipes are a global-only lock category — a reload per individual unlock would be work for nothing. → [Global vs Individual Stages](/wiki/general/global-vs-individual-stages) for why that category cannot go per-player.
+The recipe reload sits only on the two global methods because recipes are a global-only lock category — a reload per individual unlock would be work for nothing. → [Global vs Individual Stages](/wiki/start-here/global-vs-individual) for why that category cannot go per-player.
 
 Two things these methods deliberately leave alone, because they belong to whoever is driving the change: **auto-trigger progress** and **temporary-mode timers**. Relocking a stage does not reset the progress a player made towards it, and does not stop a running temporary timer. `/history stage lock` clears both itself, right after its relock; a `lose_on_death` relock expires the timer itself, and keeps the progress on purpose.
 

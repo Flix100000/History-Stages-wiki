@@ -1,0 +1,5 @@
+{
+  "label": "Config Files",
+  "position": 4,
+  "link": { "type": "doc", "id": "server/config-files/index" }
+}

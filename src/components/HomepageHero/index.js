@@ -39,7 +39,7 @@ export default function HomepageHero() {
         <div className={styles.buttons}>
           <Link
             className={clsx('button button--lg', styles.heroButton)}
-            to="/wiki/general/getting-started">
+            to="/wiki/start-here/installation">
             Getting Started
           </Link>
         </div>

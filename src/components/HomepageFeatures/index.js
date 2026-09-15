@@ -16,7 +16,7 @@ const FeatureList = [
         dependency system covering XP, kills, stats, and more.
       </>
     ),
-    to: '/wiki/modpack-developers/in-game-tools/research-system',
+    to: '/wiki/in-game-tools/research/pedestal',
   },
   {
     title: 'In-Game Editor',
@@ -28,7 +28,7 @@ const FeatureList = [
         designer, all from the pause menu.
       </>
     ),
-    to: '/wiki/modpack-developers/in-game-tools/in-game-editor',
+    to: '/wiki/in-game-tools/in-game-editor',
   },
   {
     title: 'Stage Graph',
@@ -40,7 +40,7 @@ const FeatureList = [
         Off by default — how much structure to reveal is your call.
       </>
     ),
-    to: '/wiki/modpack-developers/in-game-tools/stage-graph',
+    to: '/wiki/in-game-tools/stage-graph',
   },
   {
     title: 'The Research Record',
@@ -52,7 +52,7 @@ const FeatureList = [
         obscured mode turns locked entries into silhouettes.
       </>
     ),
-    to: '/wiki/modpack-developers/in-game-tools/research-system#the-open-scroll-document',
+    to: '/wiki/in-game-tools/research/scrolls#the-open-scroll-document',
   },
   {
     title: 'Addon Platform',

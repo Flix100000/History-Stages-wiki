@@ -3,8 +3,13 @@ title: Zones
 sidebar_position: 3
 ---
 
-:::warning
-**Beta.** Zones work and are enforced, but the category is younger than the rest and still growing. Expect additions.
+:::warning[Beta]
+Zones work and are enforced, but the category is much younger than the rest of the mod and has had
+far less use. **Expect bugs, and expect things to change.** Fields may be renamed or behave
+differently in a later version, and a zone that works today is not a promise about next release.
+
+Fine for building with and worth reporting anything odd about. Think twice before a zone is the
+only thing holding back something a pack depends on.
 :::
 
 A zone is an area the pack author draws themselves — a crater, a walled-off city, the far side of a river — rather than something Minecraft already has a name for. Unlike biome and structure locks, whose behaviour is set once for the whole server in the config, **every zone carries its own rules**: one can merely refuse interaction while the next one burns.

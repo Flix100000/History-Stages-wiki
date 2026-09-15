@@ -202,8 +202,9 @@ types are not offered — an entry for them would be written to the stage file a
 
 ## The Zone Editor
 
-:::warning
-**Beta.** The zone category is younger than the rest and still growing.
+:::warning[Beta]
+The zone category is much younger than the rest of the mod. Expect bugs, and expect it to change. →
+[Zones](/wiki/locking/world/zones)
 :::
 
 Zones are the one lock type with no registry to pick from — the area has to be drawn. The zone tab lists a stage's zones with a one-line summary of what each does (`3 shapes · damage · barrier · inverted`), and **Edit** opens the zone's own screen.

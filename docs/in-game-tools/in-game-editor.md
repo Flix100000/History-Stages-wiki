@@ -96,12 +96,18 @@ The **Dependency Editor** builds prerequisites visually: deposited items and ite
 kills, XP levels, statistics, scoreboard objectives, other stages — arranged into
 [groups](/wiki/stage-file/dependencies) with their own AND/OR logic.
 
-The **Dependency Graph** is a read-only, operator-only node graph of every dependency in the pack.
-It is what finds a long chain, a missing link or an accidental cycle at a glance.
+To see how the whole chain fits together, open the
+[Stage Graph](/wiki/in-game-tools/stage-graph) from the Stage Overview. It draws every stage as a
+node with its dependencies as edges, which is what makes a long chain or a link you did not mean
+visible at a glance.
 
-:::note[Not the same thing as the Stage Graph]
-The dependency graph is an authoring tool. The [Stage Graph](/wiki/in-game-tools/stage-graph) is a
-separate, configurable feature shown to ordinary players from the pause menu.
+:::note[The editor sees more of it than players do]
+It is one screen with two ways in. Opened from the editor it shows **every** stage, ignoring the
+visibility rules in `graph.toml`. Opened from the pause menu it applies them, so players see only
+what the pack wants them to.
+
+That is also where the graph's layout and its per-stage styling are done — the node positions and
+the **Re-arrange** button live in the graph itself, not in a separate authoring tool.
 :::
 
 ## Warnings while you build

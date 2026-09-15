@@ -51,6 +51,33 @@ bulk work.
 Because they read the live registry, a picker cannot produce an id that does not exist — which is
 the main reason to use the editor for anything larger than a handful of entries.
 
+**Right-click is how you edit an entry that is already in a list.** The picker only adds things;
+everything after that — NBT criteria, lock actions, a spawn rule, a generation cap, copying the id,
+removing it again — is in the context menu that opens on a right-click. Which items appear depends
+on the tab:
+
+| Menu entry | Where it appears |
+| :--- | :--- |
+| **Edit NBT** | Items, Tags, Exceptions, Trades |
+| **Lock Actions** | Items, Tags, Mods, Fluids |
+| **Text Override** | Items, Tags, Mods, Fluids — but only while the stage's Display card is set to *replace* |
+| **Generation** | Structures, on global stages only |
+| **SpawnControl** | Spawn |
+| **Interaction Actions**, **Item Filter** | Interaction |
+| **Merchant Levels** | Trade professions |
+| **Edit** | Mods, and Zones |
+| **Copy ID**, **Remove** | everywhere |
+
+Two of those go missing rather than grey out, which reads as a bug the first time.
+**Text Override** is absent until `hidden_display` is actually replacing a name or a tooltip —
+there is nothing to override otherwise. **Generation** is absent on an individual stage, because
+world generation cannot be gated per player.
+
+An installed addon appends its own items below the built-in ones and above Copy ID and Remove.
+
+Left-click does something useful on two tabs: a recipe card opens read-only so you can see what an
+id actually makes, and a zone row opens the zone editor.
+
 The [recipe picker](#the-recipe-picker) works differently enough to have its own section below, and
 so do the [zone editor](#the-zone-editor) and the [spawn rule dialog](#the-spawn-rule-dialog).
 

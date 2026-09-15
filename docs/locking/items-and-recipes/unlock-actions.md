@@ -38,12 +38,12 @@ locks everything.
 
 ## In the editor
 
-Not a tab of its own — it hangs off an entry. Open the menu on an item, tag or mod row and pick the
-lock-actions editor; the actions are tick boxes, and the labels in the table below are what you see
-there.
+Not a tab of its own — it hangs off an entry that is already in the list. **Right-click the entry**
+and pick **Lock Actions** from the context menu; the popup that opens has one tick box per action,
+labelled as in the table below.
 
-The same thing exists for entity interaction entries and for fluid rows, each with its own shorter
-set of actions.
+Entity interaction entries have their own version of the same popup under **Interaction Actions**,
+and fluid rows use the shorter fluid vocabulary.
 
 ## The actions
 

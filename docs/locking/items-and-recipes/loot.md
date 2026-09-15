@@ -25,8 +25,9 @@ decision in [gameplay.toml](/wiki/server/config-files/gameplay-toml#loot_replace
 
 ## In the editor
 
-There is no Loot tab, because loot is not a category of its own. The `loot` action sits in the
-lock-actions menu of an ordinary item, tag or mod entry, alongside `use`, `pickup` and the rest.
+There is no Loot tab, because loot is not a category of its own. **Right-click** an ordinary item,
+tag or mod entry and pick **Lock Actions**; `loot` is one of the tick boxes in that popup, alongside
+`use`, `pickup` and the rest.
 
 Replacement is server-wide and lives in the **Common** tab of the
 [Config Editor](/wiki/in-game-tools/in-game-editor#the-config-editor) under `loot_replacements`.

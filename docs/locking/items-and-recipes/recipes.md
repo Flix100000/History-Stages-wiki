@@ -25,8 +25,11 @@ The **Recipes** tab. Its picker is two columns: everything recipes produce on th
 actual recipes as cards on the right, drawn in the recipe's real shape — which is the only way to
 tell apart two recipes that use the same ingredients differently.
 
-Selection survives moving between items, so several recipes across several items can be gathered
-before pressing **Add**. On an individual stage the picker offers only the recipe types that can be
+Left-clicking a card in the list of a stage opens it read-only, so you can check what a recipe id
+actually makes without leaving the tab.
+
+In the picker, selection survives moving between items, so several recipes across several items can
+be gathered before pressing **Add**. On an individual stage the picker offers only the recipe types that can be
 gated per player, and says so under the grid. →
 [The Recipe Picker](/wiki/in-game-tools/in-game-editor#the-recipe-picker)
 

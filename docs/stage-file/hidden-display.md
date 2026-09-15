@@ -15,7 +15,14 @@ Not a tab — it belongs to the stage rather than to one lock category. **Stage 
 on the stage's own screen, holds it as the **Display** card: the two modes as dropdowns, their
 replacement texts as fields, and the lock-hint switch.
 
-Per-entry overrides are set where the entry is, from an item or tag row's own menu.
+Per-entry overrides are set where the entry is: **right-click** the item, tag, mod or fluid in its
+list and pick **Text Override**.
+
+:::note[No Text Override in the menu?]
+It only appears while this stage's `name_mode` or `tooltip_mode` is set to `"replace"` — with both
+off or hidden there is no text for an entry to override, so the menu leaves it out rather than
+offering something that would do nothing.
+:::
 
 ```json
 {

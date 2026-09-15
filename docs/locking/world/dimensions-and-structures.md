@@ -13,8 +13,10 @@ structure inside the world. A third option caps how often a structure is allowed
 Two tabs: **Dimensions** and **Structures**, each with a searchable picker. The structure picker
 takes structure tags as well as ids.
 
-A structure already in the list has a context menu, and that is where
-[generation limits](#generation-limits) are set — `block_generation` is not a separate tab.
+**Right-click a structure** in the list and pick **Generation** — that is where
+[generation limits](#generation-limits) are set. `block_generation` is not a separate tab, which is
+why it is easy to miss. On an individual stage the menu entry is not there at all, since the cap
+only works globally.
 
 Standing somewhere and not knowing what it is called is the usual problem.
 `/history debug structure` prints the structure ids and tags at your feet, and

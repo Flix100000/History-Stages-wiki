@@ -28,9 +28,9 @@ Only Sharpness I–IV books are locked here. Every other enchanted book behaves 
 
 ## In the editor
 
-The NBT editor, reached from an item or tag row's own menu. Criteria are built as cards, with
-presets for the fields items commonly carry and a free-form dialog for anything else, plus live
-validation.
+**Right-click the entry** in the Items, Tags or Exceptions list and pick **Edit NBT**. Criteria are
+built as cards, with presets for the fields items commonly carry and a free-form dialog for anything
+else, plus live validation.
 
 The quickest route is not to build one at all: hold the item and **Ctrl-click** an inventory slot to
 import that exact stack's state. Failing that, `/history debug nbt preset`, `/history debug nbt

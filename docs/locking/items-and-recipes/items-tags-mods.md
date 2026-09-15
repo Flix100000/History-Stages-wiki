@@ -23,9 +23,19 @@ Four tabs of their own on a stage: **Items**, **Tags**, **Mods** and **Exception
 search bar over the live registry, a button to pick straight out of your own inventory, and a
 multi-select mode with a **Selected** tab for adding many at once.
 
-An entry already in the list opens its own menu: that is where the
-[NBT criteria](/wiki/locking/items-and-recipes/nbt-and-components) and the
-[lock actions](/wiki/locking/items-and-recipes/unlock-actions) are set.
+**Everything you do to an entry that is already in the list is a right-click.** The context menu
+that opens holds:
+
+| | |
+| :--- | :--- |
+| **Edit NBT** | [NBT and data component criteria](/wiki/locking/items-and-recipes/nbt-and-components). |
+| **Lock Actions** | [Narrow the entry to specific interactions](/wiki/locking/items-and-recipes/unlock-actions). |
+| **Text Override** | This entry's own [hidden-display texts](/wiki/stage-file/hidden-display#overriding-it-for-a-single-entry). |
+| **Copy ID** | The registry id, onto the clipboard. |
+| **Remove** | Takes it out of the stage. |
+
+Which of them appear depends on the tab — a mod entry has no NBT to edit — and an installed addon
+can add its own further down, above Copy ID and Remove.
 
 ## What "locked" means
 

@@ -32,7 +32,8 @@ The **Trades** tab. Its picker lists **real offers** rather than every item in t
 profession and you see what that merchant actually trades, at which level, for what price. Most of
 this block is written by clicking.
 
-Professions and the pack-wide level gate are set on the same tab, next to the offer list.
+Professions sit on the same tab. The pack-wide level gate is a **right-click** on a profession
+entry and then **Merchant Levels**.
 
 ## `offers` — one named trade
 

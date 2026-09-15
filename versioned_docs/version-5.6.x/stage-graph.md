@@ -9,7 +9,7 @@ It is separate from the read-only Dependency Graph in the [In-Game Editor](./in-
 
 ## Enabling It
 
-The Stage Graph is **off by default**. A modpack creator enables it by setting `enabled = true` under `[general]` in `graph.toml`, either by hand or through the **Graph** tab of the in-game [Config Editor](./in-game-editor.md). Once enabled, a "Stage Graph" button appears on the vanilla pause menu for every player, next to the (still OP-only) editor button.
+The Stage Graph is **off by default**. A modpack creator enables it by setting `enabled = true` under `[general]` in `graph.toml`, either by hand or through the **Graph** tab of the in-game [Config Editor](./in-game-editor.md#key-capabilities). Once enabled, a "Stage Graph" button appears on the vanilla pause menu for every player, next to the (still OP-only) editor button.
 
 The screen title defaults to a translation key (`graph.historystages.title`) but can be set to custom rich text — including `&`-style color codes — via the same rich-text dialog used elsewhere in the editor.
 
@@ -52,4 +52,4 @@ Overridable fields are the same set as the TOML style blocks (shape, size, borde
 
 ## Configuring In-Game
 
-`graph.toml` can be edited entirely in-game via the **Graph** tab of the [Config Editor](./in-game-editor.md), alongside the existing Client and Common tabs. Changes save immediately and sync to connected clients, same as the other config tabs.
+`graph.toml` can be edited entirely in-game via the **Graph** tab of the [Config Editor](./in-game-editor.md#key-capabilities), alongside the existing Client and Common tabs. Changes save immediately and sync to connected clients, same as the other config tabs.

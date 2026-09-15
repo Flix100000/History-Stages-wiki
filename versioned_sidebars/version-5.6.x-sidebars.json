@@ -59,25 +59,17 @@
         {
           "type": "doc",
           "id": "configuration"
-        },
-        {
-          "type": "doc",
-          "id": "mod-compatibility"
-        },
-        {
-          "type": "doc",
-          "id": "scripting-with-kubejs-and-crafttweaker"
         }
       ]
     },
     {
       "type": "category",
-      "label": "Project",
+      "label": "For Mod Developers",
       "collapsed": false,
       "items": [
         {
           "type": "doc",
-          "id": "porting-history-stages"
+          "id": "integrations-and-api"
         }
       ]
     }

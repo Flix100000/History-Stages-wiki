@@ -6,9 +6,11 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
+    // No title prop on purpose: the front page is called what the site is called. Both
+    // this and the description were still the template's placeholders, which is what a
+    // link preview in Discord was showing.
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      description={`${siteConfig.tagline}. Stages, locks, research and the in-game editor, for every version.`}>
       <HomepageHero />
       <main>
         <HomepageFeatures />

@@ -84,6 +84,9 @@ const config = {
         editUrl: 'https://github.com/Flix100000/History-Stages-wiki/edit/main/',
       }),
     ],
+    // Screenshots are small enough to sit in the flow of a page and too small to read
+    // there; clicking one opens it full size instead of sending people to a raw image URL.
+    require.resolve('docusaurus-plugin-image-zoom'),
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
@@ -104,6 +107,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
+      zoom: {
+        selector: '.markdown img',
+        background: {
+          light: 'rgba(255, 255, 255, 0.92)',
+          dark: 'rgba(15, 15, 17, 0.94)',
+        },
+      },
       colorMode: {
         respectPrefersColorScheme: true,
       },

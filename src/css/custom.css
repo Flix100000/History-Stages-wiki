@@ -1,3 +1,7 @@
+/* The image-zoom plugin ships the behaviour but no stylesheet, so medium-zoom's own
+   has to be pulled in here or clicking a screenshot does nothing visible. */
+@import 'medium-zoom/dist/style.css';
+
 /**
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to

@@ -1,0 +1,22 @@
+name: Build check
+
+# The deploy workflow only runs after a push to main, which is too late to find out
+# that a page does not build. This runs the same two steps on a pull request.
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm run check

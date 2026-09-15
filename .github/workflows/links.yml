@@ -1,0 +1,40 @@
+name: External links
+
+# Internal links break the build already (onBrokenLinks/onBrokenAnchors: throw).
+# What nothing catches is a link leaving the site going dead -- a moved mod page,
+# a renamed GitHub file. Monthly is often enough for that.
+on:
+  schedule:
+    - cron: '0 6 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        id: lychee
+        with:
+          # Only the living tree: the archives are frozen on purpose and are expected
+          # to point at things that have since moved.
+          args: >-
+            --no-progress
+            --exclude-path versioned_docs
+            --exclude-all-private
+            --max-concurrency 4
+            --accept 200,206,403,429
+            'docs/**/*.md' 'api/**/*.md' '*.md'
+          output: lychee/report.md
+          fail: false
+      - name: Report
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Dead external links in the wiki
+          content-filepath: lychee/report.md
+          labels: documentation

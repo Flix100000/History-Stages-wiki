@@ -7,12 +7,16 @@ sidebar_position: 4
 
 History Stages is built by **Flix100000** and **PixlStudios**.
 
+Everyone who has contributed code is listed on the repository's
+[contributors page](https://github.com/Flix100000/History-Stages/graphs/contributors).
+
 Translations beyond German and English come from the community. The German and English language
 files are maintained in the repository; every other language is contributed, and corrections to
 them are welcome as pull requests.
 
-Thanks to everyone who has reported a bug with a log attached, argued a design decision in Discord,
-or built a pack big enough to find the edges.
+Thanks also to everyone who has reported a bug with a log attached, argued a design decision in
+Discord, or built a pack big enough to find the edges — none of which shows up on a contributors
+graph.
 
 ## The mod
 

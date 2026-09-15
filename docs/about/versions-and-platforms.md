@@ -5,21 +5,28 @@ sidebar_position: 1
 
 # Versions & Platforms
 
-History Stages runs on three mod loaders, and they are **not** at the same version. The newest
+History Stages runs on three mod loaders, and they are **not** all at the same version. New
 features land on NeoForge first; the other two follow when they follow.
 
-| Loader | Minecraft | Mod version | Documentation |
-| :--- | :--- | :--- | :--- |
-| **NeoForge** | 1.21.1 | 6.0.x | these pages |
-| **Forge** | 1.20.1 | 5.6.x | version picker → 5.6.x |
-| **Fabric** | 1.21.1 | 5.2.x | version picker → 5.2.x |
+| Loader | Minecraft |
+| :--- | :--- |
+| **NeoForge** | 1.21.1 |
+| **Forge** | 1.20.1 |
+| **Fabric** | 1.21.1 |
 
 The 1.19.X builds are no longer updated.
 
+Which mod version each of those is currently on is on the download pages, and it moves — so it is
+deliberately not written down here where it would quietly go stale:
+[CurseForge](https://www.curseforge.com/minecraft/mc-mods/history-stages) ·
+[Modrinth](https://modrinth.com/mod/history-stages) ·
+[GitHub Releases](https://github.com/Flix100000/History-Stages/releases).
+
 :::warning[Read the pages that match what you run]
-These pages describe 6.0.x. Reading them while running the Forge or Fabric build will describe
-features that are not there — zones, merchant trades, fluid locks and the addon API are all 6.0
-additions. Use the version picker in the top bar.
+**Check the version you have installed, then pick it in the version picker in the top bar.** These
+pages describe the newest NeoForge build. Reading them while running an older Forge or Fabric build
+will describe features that are not there — zones, merchant trades, fluid locks and the addon API
+are all 6.0 additions.
 :::
 
 ## How this wiki is versioned

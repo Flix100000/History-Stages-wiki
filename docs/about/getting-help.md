@@ -5,9 +5,15 @@ sidebar_position: 2
 
 # Getting Help & Reporting Bugs
 
-[**Discord**](https://discord.gg/BeZzxyZ9c4) for questions and pack-building help ·
-[**GitHub Issues**](https://github.com/Flix100000/History-Stages/issues) for bugs and feature
-requests.
+Questions, bugs and feature requests are all welcome in either place — take whichever you already
+have open:
+
+- [**Discord**](https://discord.gg/BeZzxyZ9c4) — quickest for questions and pack-building help, and
+  fine for reporting a bug or suggesting a feature.
+- [**GitHub Issues**](https://github.com/Flix100000/History-Stages/issues) — better for anything
+  that needs a log attached or that should stay findable later.
+
+A bug raised on Discord does not get lost; it ends up as an issue if it needs one.
 
 ## Before reporting: check the load report
 
@@ -101,3 +107,5 @@ a very large pack could not get a client through login at all.
 
 If another mod is involved, say which — the useful reports usually name one. →
 [Mod Compatibility](/wiki/server/mod-compatibility)
+
+The same list applies wherever you report it. Discord is fine for all of it, a log file included.
